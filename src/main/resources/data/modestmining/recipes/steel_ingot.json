@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "steel_ingot",
+  "ingredients": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "modestmining:coke"
+    },
+    {
+      "item": "modestmining:coke"
+    },
+    {
+      "item": "modestmining:coke"
+    },
+    {
+      "item": "modestmining:coke"
+    }
+  ],
+  "result": {
+    "item": "modestmining:steel_ingot"
+  }
+}

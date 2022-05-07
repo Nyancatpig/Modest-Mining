@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:iron_leggings"
+  },
+  "addition": {
+    "item": "modestmining:steel_ingot"
+  },
+  "result": {
+    "item": "modestmining:steel_leggings"
+  }
+}

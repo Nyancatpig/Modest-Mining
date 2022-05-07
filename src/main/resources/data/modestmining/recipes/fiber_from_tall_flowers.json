@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:tall_flowers"
+    },
+    {
+      "tag": "minecraft:tall_flowers"
+    },
+    {
+      "tag": "minecraft:tall_flowers"
+    },
+    {
+      "item": "modestmining:flint_hatchet"
+    }
+  ],
+  "result": {
+    "item": "modestmining:fiber",
+    "count": 2
+  }
+}

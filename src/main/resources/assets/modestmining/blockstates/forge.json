@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "modestmining:block/forge",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "modestmining:block/forge"
+    },
+    "facing=south": {
+      "model": "modestmining:block/forge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "modestmining:block/forge",
+      "y": 270
+    }
+  }
+}

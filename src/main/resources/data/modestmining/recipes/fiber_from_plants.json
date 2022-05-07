@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "modestmining:fiber_plants"
+    },
+    {
+      "tag": "modestmining:fiber_plants"
+    },
+    {
+      "tag": "modestmining:fiber_plants"
+    },
+    {
+      "item": "modestmining:flint_hatchet"
+    }
+  ],
+  "result": {
+    "item": "modestmining:fiber",
+    "count": 1
+  }
+}

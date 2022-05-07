@@ -1,0 +1,11 @@
+{
+  "type": "modestmining:forging",
+  "ingredients": [
+    {
+      "item": "modestmining:steel_ingot"
+    }
+  ],
+  "output": {
+    "item": "modestmining:rosegold_ingot"
+  }
+}

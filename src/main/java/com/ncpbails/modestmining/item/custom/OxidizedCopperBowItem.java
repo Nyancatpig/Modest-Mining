@@ -3,22 +3,20 @@ package com.ncpbails.modestmining.item.custom;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
-import net.minecraft.tags.ItemTags;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ArrowItem;
+import net.minecraft.world.item.BowItem;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.Level;
 
-import java.util.function.Predicate;
+public class OxidizedCopperBowItem extends BowItem {
 
-public class ModBowItem extends BowItem {
-
-    public ModBowItem(Properties builder) {
+    public OxidizedCopperBowItem(Properties builder) {
         super(builder);
     }
 
@@ -49,7 +47,7 @@ public class ModBowItem extends BowItem {
                         if (velocity == 1.0F) arrowEntity.setCritArrow(true);
 
                         double damage = getArrowDamage(bowStack, arrowEntity);
-                        arrowEntity.setBaseDamage(damage*2);
+                        arrowEntity.setBaseDamage(damage*3);
 
                         int knockback = getArrowKnockback(bowStack, arrowEntity);
                         arrowEntity.setKnockback(knockback);

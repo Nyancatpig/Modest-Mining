@@ -21,6 +21,9 @@
   "item.modestmining.prismarite_nugget": "Prismarite Nugget",
   "item.modestmining.prismarite_scrap": "Prismarite Scrap",
   "item.modestmining.copper_screw": "Copper Screw",
+  "item.modestmining.shell": "Shell",
+  "item.modestmining.pearl": "Pearl",
+  "item.modestmining.clam_spawn_egg": "Clam Spawn Egg",
 
   "item.modestmining.copper_bow": "Copper Bow",
   "item.modestmining.flint_hatchet": "Flint Hatchet",
@@ -58,6 +61,7 @@
   "block.modestmining.rosegold_block": "Block of Rosegold",
   "block.modestmining.prismarite_block": "Block of Prismarite",
   "block.modestmining.compact_amethyst_block": "Block of Amethyst",
+  "block.modestmining.oceanic_remains": "Oceanic Remains",
   "block.modestmining.forge": "Forge",
 
   "block.minecraft.amethyst_block": "Amethyst Block"

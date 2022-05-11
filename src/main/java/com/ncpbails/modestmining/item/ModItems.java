@@ -1,11 +1,13 @@
 package com.ncpbails.modestmining.item;
 
 import com.ncpbails.modestmining.ModestMining;
-import com.ncpbails.modestmining.item.custom.ModBowItem;
+import com.ncpbails.modestmining.entity.ModEntityTypes;
+import com.ncpbails.modestmining.item.custom.CopperBowItem;
 import com.ncpbails.modestmining.item.custom.HatchetItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -68,9 +70,17 @@ public class ModItems {
 
     public static final RegistryObject<Item> COPPER_SCREW = ITEMS.register("copper_screw", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    public static final RegistryObject<Item> SHELL = ITEMS.register("shell", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+    public static final RegistryObject<Item> PEARL = ITEMS.register("pearl", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
+
+    public static final RegistryObject<Item> CLAM_SPAWN_EGG = ITEMS.register("clam_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.CLAM,0xdeac87, 0x9e5543,
+                    new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     //TOOLS                                                                                                                            attack      speed
-    public static final RegistryObject<Item> COPPER_BOW = ITEMS.register("copper_bow", () -> new ModBowItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).durability(600)));
+    public static final RegistryObject<Item> COPPER_BOW = ITEMS.register("copper_bow", () -> new CopperBowItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).durability(600)));
 
 
     public static final RegistryObject<Item> FLINT_HATCHET = ITEMS.register("flint_hatchet", () -> new HatchetItem(ModTiers.FLINT, 1, 1,

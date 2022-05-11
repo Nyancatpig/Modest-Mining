@@ -5,6 +5,7 @@ buildscript {
         mavenCentral()
         maven { url = "https://repo.spongepowered.org/repository/maven-public/" }
         jcenter()
+
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
@@ -161,6 +162,7 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
 }
 
 dependencies {
@@ -173,6 +175,7 @@ dependencies {
     compileOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.193:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.193")
+    implementation fg.deobf('software.bernie.geckolib:geckolib-1.18-forge:3.0.13')
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency

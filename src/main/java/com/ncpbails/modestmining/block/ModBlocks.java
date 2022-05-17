@@ -1,7 +1,9 @@
 package com.ncpbails.modestmining.block;
 
 import com.ncpbails.modestmining.ModestMining;
+import com.ncpbails.modestmining.block.custom.BrushingBlock;
 import com.ncpbails.modestmining.block.custom.ForgeBlock;
+
 import com.ncpbails.modestmining.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -11,6 +13,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FallingBlock;
+import net.minecraft.world.level.block.GrowingPlantHeadBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
@@ -53,9 +56,18 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANCIENT_DEBRIS)), CreativeModeTab.TAB_BUILDING_BLOCKS, false, 0);
 
 
+    public static final RegistryObject<Block> ANCIENT_DIRT = registerBlockNoItem("ancient_dirt",
+            () -> new BrushingBlock(BlockBehaviour.Properties.copy(Blocks.DIRT),true));
+
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab, Boolean isFuel, Integer fuelAmount) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab, isFuel, fuelAmount);
+        return toReturn;
+    }
+
+    private static <T extends Block> RegistryObject<T> registerBlockNoItem(String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
         return toReturn;
     }
 

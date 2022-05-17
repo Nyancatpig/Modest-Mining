@@ -11,6 +11,9 @@ public class ModTiers {
     public static final ForgeTier FLINT = new ForgeTier(0, 50, 1.0f, 1, 2,
                                             ModTags.Blocks.NEEDS_FLINT_TOOL, () -> Ingredient.of(Items.FLINT));
 
+    public static final ForgeTier COPPER = new ForgeTier(1, 600, 6.0f, 0f, 10,
+            BlockTags.NEEDS_STONE_TOOL, () -> Ingredient.of(Items.COPPER_INGOT));
+
     public static final ForgeTier STEEL = new ForgeTier(2, 1200, 7.0f, 2.5f, 14,
                                             BlockTags.NEEDS_IRON_TOOL, () -> Ingredient.of(ModItems.STEEL_INGOT.get()));
 

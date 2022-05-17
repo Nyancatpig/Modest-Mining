@@ -47,7 +47,7 @@ public class OxidizedCopperBowItem extends BowItem {
                         if (velocity == 1.0F) arrowEntity.setCritArrow(true);
 
                         double damage = getArrowDamage(bowStack, arrowEntity);
-                        arrowEntity.setBaseDamage(damage*3);
+                        arrowEntity.setBaseDamage(damage*2);
 
                         int knockback = getArrowKnockback(bowStack, arrowEntity);
                         arrowEntity.setKnockback(knockback);

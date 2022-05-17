@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "rosegold_ingot",
+  "ingredients": [
+    {
+      "item": "modestmining:prismarite_scrap"
+    },
+    {
+      "item": "modestmining:prismarite_scrap"
+    },
+    {
+      "item": "modestmining:prismarite_scrap"
+    },
+    {
+      "item": "modestmining:prismarite_scrap"
+    },
+    {
+      "item": "modestmining:pearl"
+    },
+    {
+      "item": "modestmining:pearl"
+    },
+    {
+      "item": "modestmining:steel_ingot"
+    },
+    {
+      "item": "modestmining:steel_ingot"
+    }
+  ],
+  "result": {
+    "item": "modestmining:prismarite_ingot"
+  }
+}

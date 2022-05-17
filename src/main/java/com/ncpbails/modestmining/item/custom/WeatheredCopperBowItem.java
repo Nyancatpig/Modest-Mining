@@ -47,7 +47,7 @@ public class WeatheredCopperBowItem extends BowItem {
                         if (velocity == 1.0F) arrowEntity.setCritArrow(true);
 
                         double damage = getArrowDamage(bowStack, arrowEntity);
-                        arrowEntity.setBaseDamage(damage*2.5);
+                        arrowEntity.setBaseDamage(damage*1.6);
 
                         int knockback = getArrowKnockback(bowStack, arrowEntity);
                         arrowEntity.setKnockback(knockback);

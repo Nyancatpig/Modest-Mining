@@ -2,8 +2,7 @@ package com.ncpbails.modestmining.item;
 
 import com.ncpbails.modestmining.ModestMining;
 import com.ncpbails.modestmining.entity.ModEntityTypes;
-import com.ncpbails.modestmining.item.custom.CopperBowItem;
-import com.ncpbails.modestmining.item.custom.HatchetItem;
+import com.ncpbails.modestmining.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;
@@ -82,10 +81,18 @@ public class ModItems {
     //TOOLS                                                                                                                            attack      speed
     public static final RegistryObject<Item> COPPER_BOW = ITEMS.register("copper_bow", () -> new CopperBowItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).durability(600)));
 
+    public static final RegistryObject<Item> EXPOSED_COPPER_BOW = ITEMS.register("exposed_copper_bow", () -> new ExposedCopperBowItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).durability(550)));
+
+    public static final RegistryObject<Item> WEATHERED_COPPER_BOW = ITEMS.register("weathered_copper_bow", () -> new WeatheredCopperBowItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).durability(500)));
+
+    public static final RegistryObject<Item> OXIDIZED_COPPER_BOW = ITEMS.register("oxidized_copper_bow", () -> new OxidizedCopperBowItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).durability(450)));
+
+    public static final RegistryObject<Item> COPPER_BRUSH = ITEMS.register("copper_brush", () -> new BrushItem(0f,0f, ModTiers.COPPER,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(600)));
 
     public static final RegistryObject<Item> FLINT_HATCHET = ITEMS.register("flint_hatchet", () -> new HatchetItem(ModTiers.FLINT, 1, 1,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 
-                                                                                                         new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
     public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register("steel_sword", () -> new SwordItem(ModTiers.STEEL, 3, -2.4f,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 

@@ -18,6 +18,10 @@
     "minecraft:bamboo",
     "minecraft:small_dripleaf",
     "minecraft:big_dripleaf",
-    "minecraft:wheat"
+    "minecraft:wheat",
+    "#minecraft:tall_flowers",
+    "#minecraft:small_flowers",
+    "#minecraft:saplings",
+    "#minecraft:leaves"
   ]
 }

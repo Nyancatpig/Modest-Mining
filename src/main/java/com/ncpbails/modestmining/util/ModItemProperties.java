@@ -10,7 +10,11 @@ public class ModItemProperties {
 
     public static void addCustomItemProperties() {
         makeBow(ModItems.COPPER_BOW.get());
+        makeBow(ModItems.EXPOSED_COPPER_BOW.get());
+        makeBow(ModItems.WEATHERED_COPPER_BOW.get());
+        makeBow(ModItems.OXIDIZED_COPPER_BOW.get());
     }
+
 
     public static void makeBow(Item item) {
         ItemProperties.register(item, new ResourceLocation("pull"), (p_174635_, p_174636_, p_174637_, p_174638_) -> {

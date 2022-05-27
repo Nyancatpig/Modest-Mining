@@ -57,7 +57,7 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> ANCIENT_DIRT = registerBlockNoItem("ancient_dirt",
-            () -> new BrushingBlock(BlockBehaviour.Properties.copy(Blocks.DIRT),true));
+            () -> new BrushingBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab, Boolean isFuel, Integer fuelAmount) {

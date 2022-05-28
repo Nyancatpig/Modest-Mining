@@ -25,6 +25,6 @@ import java.util.Map;
 
 public class BrushItem extends DiggerItem {
     public BrushItem(float v, float v1, Tier tier, Properties properties) {
-        super(v, v1, tier, ModTags.Blocks.MINEABLE_WITH_BRUSH, properties);
+        super(v, v1, tier, BlockTags.MINEABLE_WITH_SHOVEL, properties);
     }
 }

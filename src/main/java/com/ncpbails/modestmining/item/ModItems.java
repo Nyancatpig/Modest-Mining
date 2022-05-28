@@ -90,7 +90,40 @@ public class ModItems {
     public static final RegistryObject<Item> COPPER_BRUSH = ITEMS.register("copper_brush", () -> new BrushItem(0f,0f, ModTiers.COPPER,
             new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(600)));
 
-    public static final RegistryObject<Item> FLINT_HATCHET = ITEMS.register("flint_hatchet", () -> new HatchetItem(ModTiers.FLINT, 1, 1,
+    public static final RegistryObject<Item> EXPOSED_COPPER_BRUSH = ITEMS.register("exposed_copper_brush", () -> new BrushItem(0f,0f, ModTiers.COPPER,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(550)));
+
+    public static final RegistryObject<Item> WEATHERED_COPPER_BRUSH = ITEMS.register("weathered_copper_brush", () -> new BrushItem(0f,0f, ModTiers.COPPER,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(500)));
+
+    public static final RegistryObject<Item> OXIDIZED_COPPER_BRUSH = ITEMS.register("oxidized_copper_brush", () -> new BrushItem(0f,0f, ModTiers.COPPER,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(450)));
+
+    public static final RegistryObject<Item> COPPER_CHISEL = ITEMS.register("copper_chisel", () -> new ChiselItem(0f,0f, ModTiers.COPPER,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(600)));
+
+    public static final RegistryObject<Item> EXPOSED_COPPER_CHISEL = ITEMS.register("exposed_copper_chisel", () -> new ChiselItem(0f,0f, ModTiers.COPPER,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(550)));
+
+    public static final RegistryObject<Item> WEATHERED_COPPER_CHISEL = ITEMS.register("weathered_copper_chisel", () -> new ChiselItem(0f,0f, ModTiers.COPPER,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(500)));
+
+    public static final RegistryObject<Item> OXIDIZED_COPPER_CHISEL = ITEMS.register("oxidized_copper_chisel", () -> new ChiselItem(0f,0f, ModTiers.COPPER,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(450)));
+
+    public static final RegistryObject<Item> FLINT_BLADE = ITEMS.register("flint_blade", () -> new SwordItem(ModTiers.FLINT, 1, -3,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
+
+    public static final RegistryObject<Item> FLINT_HATCHET = ITEMS.register("flint_hatchet", () -> new HatchetItem(ModTiers.FLINT, 3, -3,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
+
+    public static final RegistryObject<Item> FLINT_MATTOCK = ITEMS.register("flint_mattock", () -> new PickaxeItem(ModTiers.FLINT, 0, -3,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
+
+    public static final RegistryObject<Item> FLINT_SPADE = ITEMS.register("flint_spade", () -> new ShovelItem(ModTiers.FLINT, 0, -3,
+            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
+
+    public static final RegistryObject<Item> FLINT_HOE = ITEMS.register("flint_hoe", () -> new HoeItem(ModTiers.FLINT, -1, -3,
             new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 
     public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register("steel_sword", () -> new SwordItem(ModTiers.STEEL, 3, -2.4f,

@@ -2,6 +2,7 @@ package com.ncpbails.modestmining.block;
 
 import com.ncpbails.modestmining.ModestMining;
 import com.ncpbails.modestmining.block.custom.BrushingBlock;
+import com.ncpbails.modestmining.block.custom.ChiselingBlock;
 import com.ncpbails.modestmining.block.custom.ForgeBlock;
 
 import com.ncpbails.modestmining.item.ModItems;
@@ -58,6 +59,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ANCIENT_DIRT = registerBlockNoItem("ancient_dirt",
             () -> new BrushingBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).noOcclusion()));
+
+    public static final RegistryObject<Block> ANCIENT_STONE = registerBlockNoItem("ancient_stone",
+            () -> new ChiselingBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab, Boolean isFuel, Integer fuelAmount) {

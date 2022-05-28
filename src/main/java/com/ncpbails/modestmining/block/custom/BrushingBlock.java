@@ -99,14 +99,39 @@ public class BrushingBlock extends BaseEntityBlock {
             BlockEntity entity = worldIn.getBlockEntity(pos);
             if(entity instanceof BrushingBlockEntity) {
 
-                //Main Hand
+                //Main Hand Copper
                 if (handIn.equals(InteractionHand.MAIN_HAND) && heldStack.is(ModItems.COPPER_BRUSH.get())) {
-                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, heldStack);
+                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, heldStack, 10);
                 }
-                //Off Hand
+                //Main Hand Exposed
+                else if (handIn.equals(InteractionHand.MAIN_HAND) && heldStack.is(ModItems.EXPOSED_COPPER_BRUSH.get())) {
+                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, heldStack, 8);
+                }
+                //Main Hand Weathered
+                else if (handIn.equals(InteractionHand.MAIN_HAND) && heldStack.is(ModItems.WEATHERED_COPPER_BRUSH.get())) {
+                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, heldStack, 6);
+                }
+                //Main Hand Oxidized
+                else if (handIn.equals(InteractionHand.MAIN_HAND) && heldStack.is(ModItems.OXIDIZED_COPPER_BRUSH.get())) {
+                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, heldStack, 4);
+                }
+                //Off Hand Copper
                 else if (handIn.equals(InteractionHand.OFF_HAND) && offhandStack.is(ModItems.COPPER_BRUSH.get())) {
-                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, offhandStack);
+                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, offhandStack, 10);
                 }
+                //Off Hand Exposed
+                else if (handIn.equals(InteractionHand.OFF_HAND) && offhandStack.is(ModItems.EXPOSED_COPPER_BRUSH.get())) {
+                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, offhandStack, 8);
+                }
+                //Off Hand Weathered
+                else if (handIn.equals(InteractionHand.OFF_HAND) && offhandStack.is(ModItems.WEATHERED_COPPER_BRUSH.get())) {
+                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, offhandStack, 6);
+                }
+                //Off Hand Oxidized
+                else if (handIn.equals(InteractionHand.OFF_HAND) && offhandStack.is(ModItems.OXIDIZED_COPPER_BRUSH.get())) {
+                    brushAtBlock(state, worldIn, pos, player, handIn, hit, entity, offhandStack, 4);
+                }
+
             } else {
                 throw new IllegalStateException("Our Container provider is missing!");
             }
@@ -116,8 +141,9 @@ public class BrushingBlock extends BaseEntityBlock {
     }
 
     protected void brushAtBlock(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn,
-                                BlockHitResult hit, BlockEntity entity, ItemStack itemStack){
-        ((BrushingBlockEntity) entity).playerProgress = ((BrushingBlockEntity) entity).playerProgress + 8;
+                                BlockHitResult hit, BlockEntity entity, ItemStack itemStack, int inProgress){
+        ((BrushingBlockEntity) entity).canProgress = true;
+        ((BrushingBlockEntity) entity).playerProgress = ((BrushingBlockEntity) entity).playerProgress + inProgress;
         if(((BrushingBlockEntity) entity).playerProgress > ((BrushingBlockEntity) entity).maxProgress/4*3) {
             worldIn.setBlock(pos, state.setValue(BRUSHING, 3), 2);
         }

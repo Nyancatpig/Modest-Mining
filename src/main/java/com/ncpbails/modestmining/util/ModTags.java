@@ -12,7 +12,6 @@ public class ModTags {
 
     public static class Blocks {
         public static final TagKey<Block> NEEDS_FLINT_TOOL = tag("needs_flint_tool");
-        public static final TagKey<Block> MINEABLE_WITH_BRUSH = tag("mineable_with_brush");
 
         private static TagKey<Block> tag(String name) {
             return BlockTags.create(new ResourceLocation(ModestMining.MOD_ID, name));

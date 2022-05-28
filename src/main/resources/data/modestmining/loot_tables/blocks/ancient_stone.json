@@ -6,13 +6,13 @@
       "entries": [
         {
           "type": "minecraft:loot_table",
-          "name": "modestmining:blocks/brushing_loot",
+          "name": "modestmining:blocks/chiseling_loot",
           "conditions": [
             {
               "condition": "minecraft:block_state_property",
-              "block": "modestmining:ancient_dirt",
+              "block": "modestmining:ancient_stone",
               "properties": {
-                "brushing": "3"
+                "chiseling": "3"
               }
             }
           ]

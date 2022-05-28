@@ -30,7 +30,18 @@
   "item.modestmining.weathered_copper_bow": "Weathered Copper Bow",
   "item.modestmining.oxidized_copper_bow": "Oxidized Copper Bow",
   "item.modestmining.copper_brush": "Copper Brush",
+  "item.modestmining.exposed_copper_brush": "Exposed Copper Brush",
+  "item.modestmining.weathered_copper_brush": "Weathered Copper Brush",
+  "item.modestmining.oxidized_copper_brush": "Oxidized Copper Brush",
+  "item.modestmining.copper_chisel": "Copper Chisel",
+  "item.modestmining.exposed_copper_chisel": "Exposed Copper Chisel",
+  "item.modestmining.weathered_copper_chisel": "Weathered Copper Chisel",
+  "item.modestmining.oxidized_copper_chisel": "Oxidized Copper Chisel",
+  "item.modestmining.flint_blade": "Flint Blade",
   "item.modestmining.flint_hatchet": "Flint Hatchet",
+  "item.modestmining.flint_mattock": "Flint Mattock",
+  "item.modestmining.flint_spade": "Flint Spade",
+  "item.modestmining.flint_hoe": "Flint Hoe",
   "item.modestmining.steel_sword": "Steel Sword",
   "item.modestmining.steel_axe": "Steel Axe",
   "item.modestmining.steel_pickaxe": "Steel Pickaxe",
@@ -67,6 +78,8 @@
   "block.modestmining.compact_amethyst_block": "Block of Amethyst",
   "block.modestmining.oceanic_remains": "Oceanic Remains",
   "block.modestmining.forge": "Forge",
+  "block.modestmining.ancient_dirt": "Dirt",
+  "block.modestmining.ancient_gravel": "Gravel",
 
   "block.minecraft.amethyst_block": "Amethyst Block"
 }

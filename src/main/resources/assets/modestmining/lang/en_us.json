@@ -1,6 +1,5 @@
 {
   "item.modestmining.plank": "Plank",
-  "item.modestmining.rocks": "Rocks",
   "item.modestmining.fiber": "Fiber",
   "item.modestmining.chainmail": "Chainmail",
   "item.modestmining.coal_powder": "Coal Powder",
@@ -21,7 +20,6 @@
   "item.modestmining.prismarite_nugget": "Prismarite Nugget",
   "item.modestmining.prismarite_scrap": "Prismarite Scrap",
   "item.modestmining.copper_screw": "Copper Screw",
-  "item.modestmining.shell": "Shell",
   "item.modestmining.pearl": "Pearl",
   "item.modestmining.clam_spawn_egg": "Clam Spawn Egg",
 
@@ -78,6 +76,9 @@
   "block.modestmining.compact_amethyst_block": "Block of Amethyst",
   "block.modestmining.oceanic_remains": "Oceanic Remains",
   "block.modestmining.forge": "Forge",
+  "block.modestmining.shell": "Shell",
+  "block.modestmining.rocks": "Rocks",
+
   "block.modestmining.ancient_dirt": "Dirt",
   "block.modestmining.ancient_gravel": "Gravel",
 

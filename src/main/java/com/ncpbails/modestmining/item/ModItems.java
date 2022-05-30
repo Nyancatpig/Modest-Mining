@@ -21,7 +21,7 @@ public class ModItems {
     public static final RegistryObject<Item> PLANK = ITEMS.register("plank", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)){
         @Override public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {return 50;}});
 
-    public static final RegistryObject<Item> ROCKS = ITEMS.register("rocks", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    //public static final RegistryObject<Item> ROCKS = ITEMS.register("rocks", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> FIBER = ITEMS.register("fiber", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)){
         @Override public int getBurnTime(ItemStack itemStack, @Nullable RecipeType<?> recipeType) {return 50;}});
@@ -69,7 +69,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> COPPER_SCREW = ITEMS.register("copper_screw", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
-    public static final RegistryObject<Item> SHELL = ITEMS.register("shell", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+    //public static final RegistryObject<Item> SHELL = ITEMS.register("shell", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
     public static final RegistryObject<Item> PEARL = ITEMS.register("pearl", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
@@ -112,7 +112,7 @@ public class ModItems {
             new Item.Properties().tab(CreativeModeTab.TAB_TOOLS).durability(450)));
 
     public static final RegistryObject<Item> FLINT_BLADE = ITEMS.register("flint_blade", () -> new SwordItem(ModTiers.FLINT, 1, -3,
-            new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
     public static final RegistryObject<Item> FLINT_HATCHET = ITEMS.register("flint_hatchet", () -> new HatchetItem(ModTiers.FLINT, 3, -3,
             new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "modestmining:coal_powder_block"
+    "modestmining:coal_powder_block",
+    "modestmining:ancient_dirt"
   ]
 }

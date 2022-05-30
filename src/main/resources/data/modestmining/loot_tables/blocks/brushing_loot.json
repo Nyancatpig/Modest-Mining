@@ -5,19 +5,12 @@
       "rolls": 1,
       "entries": [
         {
-          "type": "minecraft:item",
-          "weight": 10,
-          "name": "minecraft:gold_nugget"
+          "type": "minecraft:loot_table",
+          "name": "modestmining:blocks/archaeology_treasure"
         },
         {
-          "type": "minecraft:item",
-          "weight": 2,
-          "name": "modestmining:diamond_shard"
-        },
-        {
-          "type": "minecraft:item",
-          "weight": 2,
-          "name": "modestmining:copper_screw"
+          "type": "minecraft:loot_table",
+          "name": "modestmining:blocks/archaeology_junk"
         }
       ]
     }

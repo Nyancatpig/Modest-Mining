@@ -5,6 +5,7 @@ import com.ncpbails.modestmining.block.custom.BrushingBlock;
 import com.ncpbails.modestmining.block.custom.ChiselingBlock;
 import com.ncpbails.modestmining.block.custom.ForgeBlock;
 
+import com.ncpbails.modestmining.block.entity.custom.ShellBlock;
 import com.ncpbails.modestmining.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -62,6 +63,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> ANCIENT_STONE = registerBlockNoItem("ancient_stone",
             () -> new ChiselingBlock(BlockBehaviour.Properties.copy(Blocks.STONE).noOcclusion()));
+
+    public static final RegistryObject<Block> SHELL = registerBlock("shell",
+            () -> new ShellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_LIGHT_GRAY)
+                    .strength(0.5f, 0.5f)), CreativeModeTab.TAB_MISC, false, 0);
+
+    public static final RegistryObject<Block> ROCKS = registerBlock("rocks",
+            () -> new ShellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY)
+                    .strength(0.5f, 0.5f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC, false, 0);
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab, Boolean isFuel, Integer fuelAmount) {

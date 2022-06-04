@@ -10,6 +10,10 @@
     "modestmining:oceanic_remains",
     "modestmining:ancient_stone",
     "modestmining:shell",
-    "modestmining:rocks"
+    "modestmining:rocks",
+    "modestmining:cement",
+    "modestmining:adobe_bricks",
+    "modestmining:cracked_adobe_bricks",
+    "modestmining:mossy_adobe_bricks"
   ]
 }

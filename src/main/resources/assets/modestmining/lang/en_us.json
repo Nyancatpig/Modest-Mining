@@ -21,6 +21,8 @@
   "item.modestmining.prismarite_scrap": "Prismarite Scrap",
   "item.modestmining.copper_screw": "Copper Screw",
   "item.modestmining.pearl": "Pearl",
+  "item.modestmining.adobe_brick": "Adobe Brick",
+
   "item.modestmining.clam_spawn_egg": "Clam Spawn Egg",
 
   "item.modestmining.copper_bow": "Copper Bow",
@@ -40,6 +42,10 @@
   "item.modestmining.flint_mattock": "Flint Mattock",
   "item.modestmining.flint_spade": "Flint Spade",
   "item.modestmining.flint_hoe": "Flint Hoe",
+  "item.modestmining.fiber_cap": "Fiber Cap",
+  "item.modestmining.fiber_tunic": "Fiber Tunic",
+  "item.modestmining.fiber_pants": "Fiber Pants",
+  "item.modestmining.fiber_boots": "Fiber Boots",
   "item.modestmining.steel_sword": "Steel Sword",
   "item.modestmining.steel_axe": "Steel Axe",
   "item.modestmining.steel_pickaxe": "Steel Pickaxe",
@@ -70,6 +76,11 @@
 
   "block.modestmining.coke_block": "Block of Coke",
   "block.modestmining.coal_powder_block": "Block of Coal Powder",
+  "block.modestmining.cement": "Cement",
+  "block.modestmining.cement_powder": "Cement Powder",
+  "block.modestmining.adobe_bricks": "Adobe Bricks",
+  "block.modestmining.cracked_adobe_bricks": "Cracked Adobe Bricks",
+  "block.modestmining.mossy_adobe_bricks": "Mossy Adobe Bricks",
   "block.modestmining.steel_block": "Block of Steel",
   "block.modestmining.rosegold_block": "Block of Rosegold",
   "block.modestmining.prismarite_block": "Block of Prismarite",

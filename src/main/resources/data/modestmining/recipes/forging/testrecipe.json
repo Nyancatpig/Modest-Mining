@@ -3,6 +3,18 @@
   "ingredients": [
     {
       "item": "modestmining:steel_ingot"
+    },
+    {
+      "item": "modestmining:steel_ingot"
+    },
+    {
+      "item": "modestmining:steel_ingot"
+    },
+    {
+      "item": "modestmining:steel_ingot"
+    },
+    {
+      "item": "modestmining:steel_ingot"
     }
   ],
   "output": {

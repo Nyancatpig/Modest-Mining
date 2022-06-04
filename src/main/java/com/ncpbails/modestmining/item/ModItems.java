@@ -73,6 +73,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> PEARL = ITEMS.register("pearl", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    public static final RegistryObject<Item> ADOBE_BRICK = ITEMS.register("adobe_brick", () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+
 
     public static final RegistryObject<Item> CLAM_SPAWN_EGG = ITEMS.register("clam_spawn_egg",
             () -> new ForgeSpawnEggItem(ModEntityTypes.CLAM,0xdeac87, 0x9e5543,
@@ -125,6 +127,18 @@ public class ModItems {
 
     public static final RegistryObject<Item> FLINT_HOE = ITEMS.register("flint_hoe", () -> new HoeItem(ModTiers.FLINT, -1, -3,
             new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
+
+    public static final RegistryObject<Item> FIBER_CAP = ITEMS.register("fiber_cap", () -> new ArmorItem(ModArmourMaterials.FIBER, EquipmentSlot.HEAD,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> FIBER_TUNIC = ITEMS.register("fiber_tunic", () -> new ArmorItem(ModArmourMaterials.FIBER, EquipmentSlot.CHEST,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> FIBER_PANTS = ITEMS.register("fiber_pants", () -> new ArmorItem(ModArmourMaterials.FIBER, EquipmentSlot.LEGS,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> FIBER_BOOTS = ITEMS.register("fiber_boots", () -> new ArmorItem(ModArmourMaterials.FIBER, EquipmentSlot.FEET,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
     public static final RegistryObject<Item> STEEL_SWORD = ITEMS.register("steel_sword", () -> new SwordItem(ModTiers.STEEL, 3, -2.4f,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));

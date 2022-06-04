@@ -12,6 +12,9 @@ import java.util.function.Supplier;
 
 public enum ModArmourMaterials implements ArmorMaterial {
 
+    FIBER("fiber", 3, new int[]{1, 1, 2, 1}, 3, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, () -> {
+        return Ingredient.of(ModItems.FIBER.get()); }),
+
     STEEL("steel", 25, new int[]{2, 5, 7, 2}, 9, SoundEvents.ARMOR_EQUIP_NETHERITE, 1.0F, 0.1F, () -> {
         return Ingredient.of(ModItems.STEEL_INGOT.get()); }),
 

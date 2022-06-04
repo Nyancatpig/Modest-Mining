@@ -24,6 +24,9 @@
     },
     {
       "item": "modestmining:oxidized_copper_chisel"
+    },
+    {
+      "item": "minecraft:spyglass"
     }
   ],
   "result": "modestmining:copper_nugget",

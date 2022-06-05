@@ -17,14 +17,18 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.AbstractCookingRecipe;
+import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.CapabilityItemHandler;
@@ -51,6 +55,7 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 72;
+    private int litTime = 0;
 
     public ForgeBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.FORGE_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
@@ -59,6 +64,7 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
                 switch (index) {
                     case 0: return ForgeBlockEntity.this.progress;
                     case 1: return ForgeBlockEntity.this.maxProgress;
+                    case 2: return ForgeBlockEntity.this.litTime;
                     default: return 0;
                 }
             }
@@ -67,11 +73,12 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
                 switch(index) {
                     case 0: ForgeBlockEntity.this.progress = value; break;
                     case 1: ForgeBlockEntity.this.maxProgress = value; break;
+                    case 2: ForgeBlockEntity.this.litTime = value; break;
                 }
             }
 
             public int getCount() {
-                return 2;
+                return 3;
             }
         };
     }
@@ -113,6 +120,7 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
     protected void saveAdditional(@NotNull CompoundTag tag) {
         tag.put("inventory", itemHandler.serializeNBT());
         tag.putInt("forge.progress", progress);
+        tag.putInt("forge.lit_time", litTime);
         super.saveAdditional(tag);
     }
 
@@ -121,6 +129,7 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
         super.load(nbt);
         itemHandler.deserializeNBT(nbt.getCompound("inventory"));
         progress = nbt.getInt("forge.progress");
+        litTime = nbt.getInt("forge.lit_time");
     }
 
     public void drops() {
@@ -134,6 +143,8 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
 
 
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, ForgeBlockEntity pBlockEntity) {
+        SimpleContainer inventory = new SimpleContainer(pBlockEntity.itemHandler.getSlots());
+
         if(hasRecipe(pBlockEntity)) {
             pBlockEntity.progress++;
             setChanged(pLevel, pPos, pState);
@@ -144,6 +155,20 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
             pBlockEntity.resetProgress();
             setChanged(pLevel, pPos, pState);
         }
+        if (pBlockEntity.litTime <= 0)
+        {
+            //if(isFuel(inventory.getItem(9)))
+            if(inventory.getItem(9).isEmpty())
+            //if(inventory.getItem(9).getItem().getBurnTime(inventory.getItem(9), null) > 0)
+            {
+                pBlockEntity.litTime = 1;
+                //pBlockEntity.litTime = (inventory.getItem(9).getItem().getBurnTime(inventory.getItem(9), null));
+            }
+        }
+    }
+
+    public static boolean isFuel(ItemStack stack) {
+        return ForgeHooks.getBurnTime(stack, null) > 0;
     }
 
     private static boolean hasRecipe(ForgeBlockEntity entity) {

@@ -10,6 +10,7 @@ import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.FurnaceBlockEntity;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 
@@ -20,7 +21,7 @@ public class ForgeMenu extends AbstractContainerMenu {
     private final ContainerData data;
 
     public ForgeMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
+        this(pContainerId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(3));
     }
 
     public ForgeMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
@@ -51,6 +52,10 @@ public class ForgeMenu extends AbstractContainerMenu {
 
     public boolean isCrafting() {
         return data.get(0) > 0;
+    }
+
+    public boolean isFueled() {
+        return data.get(2) > 0;
     }
 
     public int getScaledProgress() {

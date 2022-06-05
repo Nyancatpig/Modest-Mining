@@ -36,18 +36,6 @@ public class ForgeRecipe implements Recipe<SimpleContainer> {
 
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
-        //boolean matchesFirst = recipeItems.get(0).test(pContainer.getItem(0));
-        //boolean matchesSecond = recipeItems.get(1).test(pContainer.getItem(1));
-        //boolean matchesThird = recipeItems.get(2).test(pContainer.getItem(2));
-        //boolean matchesFourth = recipeItems.get(3).test(pContainer.getItem(3));
-        //boolean matchesFith = recipeItems.get(4).test(pContainer.getItem(4));
-        //boolean matchesSixth = recipeItems.get(5).test(pContainer.getItem(5));
-        //boolean matchesSeventh = recipeItems.get(6).test(pContainer.getItem(6));
-        //boolean matchesEighth = recipeItems.get(7).test(pContainer.getItem(7));
-        //if ( matchesFirst && matchesSecond && matchesThird && matchesFourth && matchesFith && matchesSixth && matchesSeventh && matchesEighth) {
-        //    return true;
-        //}
-        //return false;
         StackedContents stackedcontents = new StackedContents();
         List<ItemStack> inputs = new java.util.ArrayList<>();
         int i = 0;
@@ -56,9 +44,7 @@ public class ForgeRecipe implements Recipe<SimpleContainer> {
             ItemStack itemstack = pContainer.getItem(j);
             if (!itemstack.isEmpty()) {
                 ++i;
-                //if (isSimple)
-                    stackedcontents.accountStack(itemstack, 1);
-                //else inputs.add(itemstack);
+                stackedcontents.accountStack(itemstack, 1);
             }
         }
             return i == this.recipeItems.size() && (isSimple ? stackedcontents.canCraft(this, null) :

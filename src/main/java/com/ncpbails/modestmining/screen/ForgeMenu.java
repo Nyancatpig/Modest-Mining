@@ -25,7 +25,7 @@ public class ForgeMenu extends AbstractContainerMenu {
 
     public ForgeMenu(int pContainerId, Inventory inv, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.FORGE_MENU.get(), pContainerId);
-        checkContainerSize(inv, 6);
+        checkContainerSize(inv, 10);
         blockEntity = ((ForgeBlockEntity) entity);
         this.level = inv.player.level;
         this.data = data;
@@ -34,12 +34,16 @@ public class ForgeMenu extends AbstractContainerMenu {
         addPlayerHotbar(inv);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-            this.addSlot(new SlotItemHandler(handler, 0, 39, 46));
-            this.addSlot(new SlotItemHandler(handler, 1, 57, 46));
-            this.addSlot(new SlotItemHandler(handler, 2, 30, 22));
-            this.addSlot(new SlotItemHandler(handler, 3, 48, 22));
-            this.addSlot(new SlotItemHandler(handler, 4, 66, 22));
-            this.addSlot(new ModResultSlot(handler, 5, 129, 22));
+            this.addSlot(new SlotItemHandler(handler, 0, 21, 20));
+            this.addSlot(new SlotItemHandler(handler, 1, 39, 20));
+            this.addSlot(new SlotItemHandler(handler, 2, 57, 20));
+            this.addSlot(new SlotItemHandler(handler, 3, 75, 20));
+            this.addSlot(new SlotItemHandler(handler, 4, 21, 38));
+            this.addSlot(new SlotItemHandler(handler, 5, 39, 38));
+            this.addSlot(new SlotItemHandler(handler, 6, 57, 38));
+            this.addSlot(new SlotItemHandler(handler, 7, 75, 38));
+            this.addSlot(new ModResultSlot(handler, 8, 135, 30));
+            this.addSlot(new SlotItemHandler(handler, 9, 75, 62));
         });
 
         addDataSlots(data);
@@ -73,7 +77,7 @@ public class ForgeMenu extends AbstractContainerMenu {
     private static final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
 
     // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 6;  // must be the number of slots you have!
+    private static final int TE_INVENTORY_SLOT_COUNT = 10;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {

@@ -1,6 +1,5 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "rosegold_ingot",
+  "type": "modestmining:forging",
   "ingredients": [
     {
       "item": "minecraft:gold_ingot"
@@ -27,7 +26,7 @@
       "item": "minecraft:copper_ingot"
     }
   ],
-  "result": {
+  "output": {
     "item": "modestmining:rosegold_ingot"
   }
 }

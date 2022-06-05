@@ -1,6 +1,5 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "steel_ingot",
+  "type": "modestmining:forging",
   "ingredients": [
     {
       "item": "minecraft:iron_ingot"
@@ -27,7 +26,7 @@
       "item": "modestmining:coke"
     }
   ],
-  "result": {
+  "output": {
     "item": "modestmining:steel_ingot"
   }
 }

@@ -3,33 +3,71 @@ package com.ncpbails.modestmining.recipe;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.ncpbails.modestmining.ModestMining;
+import it.unimi.dsi.fastutil.ints.IntList;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.player.StackedContents;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.common.util.RecipeMatcher;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 public class ForgeRecipe implements Recipe<SimpleContainer> {
 
     private final ResourceLocation id;
     private final ItemStack output;
     private final NonNullList<Ingredient> recipeItems;
+    private final boolean isSimple;
 
     public ForgeRecipe(ResourceLocation id, ItemStack output,
-                       NonNullList<Ingredient> recipeItems) {
+                           NonNullList<Ingredient> recipeItems) {
         this.id = id;
         this.output = output;
         this.recipeItems = recipeItems;
+        this.isSimple = recipeItems.stream().allMatch(Ingredient::isSimple);
     }
 
     @Override
     public boolean matches(SimpleContainer pContainer, Level pLevel) {
-        return recipeItems.get(0).test(pContainer.getItem(1));
+        //boolean matchesFirst = recipeItems.get(0).test(pContainer.getItem(0));
+        //boolean matchesSecond = recipeItems.get(1).test(pContainer.getItem(1));
+        //boolean matchesThird = recipeItems.get(2).test(pContainer.getItem(2));
+        //boolean matchesFourth = recipeItems.get(3).test(pContainer.getItem(3));
+        //boolean matchesFith = recipeItems.get(4).test(pContainer.getItem(4));
+        //boolean matchesSixth = recipeItems.get(5).test(pContainer.getItem(5));
+        //boolean matchesSeventh = recipeItems.get(6).test(pContainer.getItem(6));
+        //boolean matchesEighth = recipeItems.get(7).test(pContainer.getItem(7));
+        //if ( matchesFirst && matchesSecond && matchesThird && matchesFourth && matchesFith && matchesSixth && matchesSeventh && matchesEighth) {
+        //    return true;
+        //}
+        //return false;
+        StackedContents stackedcontents = new StackedContents();
+        List<ItemStack> inputs = new java.util.ArrayList<>();
+        int i = 0;
+
+        for(int j = 0; j < 8; ++j) {
+            ItemStack itemstack = pContainer.getItem(j);
+            if (!itemstack.isEmpty()) {
+                ++i;
+                //if (isSimple)
+                    stackedcontents.accountStack(itemstack, 1);
+                //else inputs.add(itemstack);
+            }
+        }
+            return i == this.recipeItems.size() && (isSimple ? stackedcontents.canCraft(this, null) :
+                    RecipeMatcher.findMatches(inputs, this.recipeItems) != null);
+    }
+
+    @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return recipeItems;
     }
 
     @Override
@@ -78,7 +116,7 @@ public class ForgeRecipe implements Recipe<SimpleContainer> {
             ItemStack output = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(json, "output"));
 
             JsonArray ingredients = GsonHelper.getAsJsonArray(json, "ingredients");
-            NonNullList<Ingredient> inputs = NonNullList.withSize(1, Ingredient.EMPTY);
+            NonNullList<Ingredient> inputs = NonNullList.withSize(8, Ingredient.EMPTY);
 
             for (int i = 0; i < inputs.size(); i++) {
                 inputs.set(i, Ingredient.fromJson(ingredients.get(i)));

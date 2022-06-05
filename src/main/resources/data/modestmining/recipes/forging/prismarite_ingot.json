@@ -1,6 +1,5 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "group": "rosegold_ingot",
+  "type": "modestmining:forging",
   "ingredients": [
     {
       "item": "modestmining:prismarite_scrap"
@@ -27,7 +26,7 @@
       "item": "minecraft:gold_ingot"
     }
   ],
-  "result": {
+  "output": {
     "item": "modestmining:prismarite_ingot"
   }
 }

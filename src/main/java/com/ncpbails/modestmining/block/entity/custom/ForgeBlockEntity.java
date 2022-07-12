@@ -145,6 +145,12 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, ForgeBlockEntity pBlockEntity) {
         SimpleContainer inventory = new SimpleContainer(pBlockEntity.itemHandler.getSlots());
 
+
+        if(isFuel(inventory.getItem(9)))
+        {
+            pBlockEntity.litTime = 1;
+        }
+
         if(hasRecipe(pBlockEntity)) {
             pBlockEntity.progress++;
             setChanged(pLevel, pPos, pState);
@@ -155,20 +161,12 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
             pBlockEntity.resetProgress();
             setChanged(pLevel, pPos, pState);
         }
-        if (pBlockEntity.litTime <= 0)
-        {
-            //if(isFuel(inventory.getItem(9)))
-            if(inventory.getItem(9).isEmpty())
-            //if(inventory.getItem(9).getItem().getBurnTime(inventory.getItem(9), null) > 0)
-            {
-                pBlockEntity.litTime = 1;
-                //pBlockEntity.litTime = (inventory.getItem(9).getItem().getBurnTime(inventory.getItem(9), null));
-            }
-        }
+        //if(isFuel(inventory.getItem(9)))
     }
 
     public static boolean isFuel(ItemStack stack) {
-        return ForgeHooks.getBurnTime(stack, null) > 0;
+        //return ForgeHooks.getBurnTime(stack, null) > 0;
+        return stack.isEmpty();
     }
 
     private static boolean hasRecipe(ForgeBlockEntity entity) {

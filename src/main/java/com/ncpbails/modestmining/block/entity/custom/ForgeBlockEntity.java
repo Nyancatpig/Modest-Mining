@@ -1,6 +1,8 @@
 package com.ncpbails.modestmining.block.entity.custom;
 
+import com.ncpbails.modestmining.ModestMining;
 import com.ncpbails.modestmining.block.entity.ModBlockEntities;
+import com.ncpbails.modestmining.item.ModItems;
 import com.ncpbails.modestmining.recipe.ForgeRecipe;
 import com.ncpbails.modestmining.screen.ForgeMenu;
 import com.ncpbails.modestmining.util.ModTags;
@@ -43,6 +45,11 @@ import java.util.Random;
 
 public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
 
+    protected final ContainerData data;
+    private int progress = 0;
+    private int maxProgress = 72;
+    private int litTime = 0;
+
     private final ItemStackHandler itemHandler = new ItemStackHandler(10) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -51,11 +58,6 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
     };
 
     private LazyOptional<IItemHandler> lazyItemHandler = LazyOptional.empty();
-
-    protected final ContainerData data;
-    private int progress = 0;
-    private int maxProgress = 72;
-    private int litTime = 0;
 
     public ForgeBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(ModBlockEntities.FORGE_BLOCK_ENTITY.get(), pWorldPosition, pBlockState);
@@ -143,12 +145,15 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
 
 
     public static void tick(Level pLevel, BlockPos pPos, BlockState pState, ForgeBlockEntity pBlockEntity) {
-        SimpleContainer inventory = new SimpleContainer(pBlockEntity.itemHandler.getSlots());
-
-
-        if(isFuel(inventory.getItem(9)))
+        if(isFueled(pBlockEntity))
         {
             pBlockEntity.litTime = 1;
+            setChanged(pLevel, pPos, pState);
+        }
+        else
+        {
+            pBlockEntity.litTime = 0;
+            setChanged(pLevel, pPos, pState);
         }
 
         if(hasRecipe(pBlockEntity)) {
@@ -161,12 +166,6 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
             pBlockEntity.resetProgress();
             setChanged(pLevel, pPos, pState);
         }
-        //if(isFuel(inventory.getItem(9)))
-    }
-
-    public static boolean isFuel(ItemStack stack) {
-        //return ForgeHooks.getBurnTime(stack, null) > 0;
-        return stack.isEmpty();
     }
 
     private static boolean hasRecipe(ForgeBlockEntity entity) {
@@ -180,9 +179,19 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
                 .getRecipeFor(ForgeRecipe.Type.INSTANCE, inventory, level);
 
         return match.isPresent()
-                && (inventory.getItem(8).isEmpty()
-                || (inventory.getItem(8).is(match.get().getResultItem().getItem())
-                && inventory.getItem(8).getMaxStackSize() > inventory.getItem(8).getCount()));
+                && inventory.getItem(9).is(ModItems.COKE.get()) && (
+                    inventory.getItem(8).isEmpty()
+                            || (
+                                    inventory.getItem(8).is(match.get().getResultItem().getItem())
+                                            && inventory.getItem(8).getMaxStackSize() > inventory.getItem(8).getCount()
+                               )
+
+                );
+    }
+
+    private static boolean isFueled(ForgeBlockEntity entity) {
+        SimpleContainer inventory = new SimpleContainer(entity.itemHandler.getSlots());
+        return inventory.getItem(9).is(ModItems.COKE.get());
     }
 
     private static void craftItem(ForgeBlockEntity entity) {
@@ -205,6 +214,8 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
             entity.itemHandler.extractItem(6,1, false);
             entity.itemHandler.extractItem(7,1, false);
 
+            entity.itemHandler.extractItem(9,1, false);
+
             entity.itemHandler.setStackInSlot(8, new ItemStack(match.get().getResultItem().getItem(),
                     entity.itemHandler.getStackInSlot(8).getCount() + 1));
 
@@ -214,15 +225,6 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
 
     private void resetProgress() {
         this.progress = 0;
-    }
-
-    private static boolean canInsertItemIntoOutputSlotEmpty(SimpleContainer inventory, ItemStack output) {
-        return inventory.getItem(8).isEmpty();
-    }
-//inventory.getItem(5).getItem() == output.getItem() ||
-
-    private static boolean canInsertAmountIntoOutputSlotSize(SimpleContainer inventory) {
-        return inventory.getItem(8).getMaxStackSize() > inventory.getItem(8).getCount();
     }
 }
 

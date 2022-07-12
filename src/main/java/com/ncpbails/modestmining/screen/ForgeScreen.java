@@ -33,6 +33,9 @@ public class ForgeScreen extends AbstractContainerScreen<ForgeMenu> {
         if(menu.isFueled()) {
             blit(pPoseStack, x + 104, y + 64, 176, 0, 14, 15);
         }
+        if(!menu.isFueled()) {
+            blit(pPoseStack, x + 104, y + 64, 176, 0, 0, 15);
+        }
     }
 
     @Override

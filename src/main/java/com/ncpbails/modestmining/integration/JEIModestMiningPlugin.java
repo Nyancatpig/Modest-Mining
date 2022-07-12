@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Objects;
 
 @JeiPlugin
-public class JEICulturalDelightsPlugin implements IModPlugin {
+public class JEIModestMiningPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
         return new ResourceLocation(ModestMining.MOD_ID, "jei_plugin");

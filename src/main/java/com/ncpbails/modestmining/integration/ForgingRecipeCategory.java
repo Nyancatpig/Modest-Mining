@@ -42,7 +42,7 @@ public class ForgingRecipeCategory implements IRecipeCategory<ForgeRecipe> {
 
     @Override
     public Component getTitle() {
-        return new TextComponent("Bamboo Mat");
+        return new TextComponent("Forge");
     }
 
     @Override
@@ -66,5 +66,6 @@ public class ForgingRecipeCategory implements IRecipeCategory<ForgeRecipe> {
         builder.addSlot(RecipeIngredientRole.INPUT, 57, 38).addIngredients(recipe.getIngredients().get(6));
         builder.addSlot(RecipeIngredientRole.INPUT, 75, 38).addIngredients(recipe.getIngredients().get(7));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 135, 30).addItemStack(recipe.getResultItem());
+        builder.addSlot(RecipeIngredientRole.INPUT, 75, 38).addIngredients(recipe.getIngredients().get(9));
     }
 }

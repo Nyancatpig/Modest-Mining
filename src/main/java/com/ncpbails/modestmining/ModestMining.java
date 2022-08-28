@@ -10,6 +10,7 @@ import com.ncpbails.modestmining.recipe.ModRecipes;
 import com.ncpbails.modestmining.screen.ForgeScreen;
 import com.ncpbails.modestmining.screen.ModMenuTypes;
 import com.ncpbails.modestmining.util.ModItemProperties;
+import com.ncpbails.modestmining.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -55,7 +56,7 @@ public class ModestMining
         ModMenuTypes.register(eventBus);
         ModRecipes.register(eventBus);
         ModEntityTypes.register(eventBus);
-
+        ModStructures.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);

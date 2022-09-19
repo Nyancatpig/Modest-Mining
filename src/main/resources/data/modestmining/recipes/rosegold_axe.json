@@ -4,7 +4,7 @@
     "item": "minecraft:golden_axe"
   },
   "addition": {
-    "item": "modestmining:rosegold_ingot"
+    "tag": "modestmining:rosegold_pieces"
   },
   "result": {
     "item": "modestmining:rosegold_axe"

@@ -4,7 +4,7 @@
     "item": "minecraft:iron_shovel"
   },
   "addition": {
-    "item": "modestmining:steel_ingot"
+    "tag": "modestmining:steel_pieces"
   },
   "result": {
     "item": "modestmining:steel_shovel"

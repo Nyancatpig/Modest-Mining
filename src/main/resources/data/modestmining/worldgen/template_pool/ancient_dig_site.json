@@ -1,0 +1,15 @@
+{
+  "name": "modestmining:ancient_dig_site",
+  "fallback": "modestmining:ancient_dig_site",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "modestmining:ancient_dig_site",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

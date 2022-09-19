@@ -4,7 +4,7 @@
     "item": "minecraft:iron_leggings"
   },
   "addition": {
-    "item": "modestmining:steel_ingot"
+    "tag": "modestmining:steel_platings"
   },
   "result": {
     "item": "modestmining:steel_leggings"

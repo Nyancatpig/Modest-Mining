@@ -6,9 +6,16 @@
     },
     {
       "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "tag": "modestmining:hammers"
     }
   ],
   "result": {
-    "item": "modestmining:coal_powder"
+    "item": "modestmining:coal_powder",
+    "count": 4
   }
 }

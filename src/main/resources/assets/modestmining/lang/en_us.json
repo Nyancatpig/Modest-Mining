@@ -21,7 +21,31 @@
   "item.modestmining.prismarite_scrap": "Prismarite Scrap",
   "item.modestmining.copper_screw": "Copper Screw",
   "item.modestmining.pearl": "Pearl",
+  "item.modestmining.amethyst": "Amethyst",
+  "item.modestmining.flesh": "Flesh",
   "item.modestmining.adobe_brick": "Adobe Brick",
+
+  "item.modestmining.iron_plating": "Iron Plating",
+  "item.modestmining.gold_plating": "Gold Plating",
+  "item.modestmining.steel_plating": "Steel Plating",
+  "item.modestmining.rosegold_plating": "Rosegold Plating",
+  "item.modestmining.netherite_plating": "Netherite Plating",
+  "item.modestmining.prismarite_plating": "Prismarite Plating",
+  "item.modestmining.diamond_plating": "Diamond Plating",
+
+  "item.modestmining.iron_piece": "Iron Piece",
+  "item.modestmining.gold_piece": "Gold Piece",
+  "item.modestmining.steel_piece": "Steel Piece",
+  "item.modestmining.rosegold_piece": "Rosegold Piece",
+  "item.modestmining.netherite_piece": "Netherite Piece",
+  "item.modestmining.prismarite_piece": "Prismarite Piece",
+  "item.modestmining.diamond_piece": "Diamond Piece",
+
+  "item.modestmining.copper_dust": "Copper Dust",
+  "item.modestmining.iron_dust": "Iron Dust",
+  "item.modestmining.gold_dust": "Gold Dust",
+  "item.modestmining.debris_dust": "Debris Dust",
+  "item.modestmining.remaining_dust": "Remaining Dust",
 
   "item.modestmining.clam_spawn_egg": "Clam Spawn Egg",
 
@@ -29,14 +53,17 @@
   "item.modestmining.exposed_copper_bow": "Exposed Copper Bow",
   "item.modestmining.weathered_copper_bow": "Weathered Copper Bow",
   "item.modestmining.oxidized_copper_bow": "Oxidized Copper Bow",
+
   "item.modestmining.copper_brush": "Copper Brush",
   "item.modestmining.exposed_copper_brush": "Exposed Copper Brush",
   "item.modestmining.weathered_copper_brush": "Weathered Copper Brush",
   "item.modestmining.oxidized_copper_brush": "Oxidized Copper Brush",
+
   "item.modestmining.copper_chisel": "Copper Chisel",
   "item.modestmining.exposed_copper_chisel": "Exposed Copper Chisel",
   "item.modestmining.weathered_copper_chisel": "Weathered Copper Chisel",
   "item.modestmining.oxidized_copper_chisel": "Oxidized Copper Chisel",
+
   "item.modestmining.flint_blade": "Flint Blade",
   "item.modestmining.flint_hatchet": "Flint Hatchet",
   "item.modestmining.flint_mattock": "Flint Mattock",
@@ -46,6 +73,9 @@
   "item.modestmining.fiber_tunic": "Fiber Tunic",
   "item.modestmining.fiber_pants": "Fiber Pants",
   "item.modestmining.fiber_boots": "Fiber Boots",
+
+  "item.modestmining.copper_hatchet": "Copper Hatchet",
+
   "item.modestmining.steel_sword": "Steel Sword",
   "item.modestmining.steel_axe": "Steel Axe",
   "item.modestmining.steel_pickaxe": "Steel Pickaxe",
@@ -55,6 +85,7 @@
   "item.modestmining.steel_chestplate": "Steel Chestplate",
   "item.modestmining.steel_leggings": "Steel Leggings",
   "item.modestmining.steel_boots": "Steel Boots",
+
   "item.modestmining.rosegold_sword": "Rosegold Sword",
   "item.modestmining.rosegold_axe": "Rosegold Axe",
   "item.modestmining.rosegold_pickaxe": "Rosegold Pickaxe",
@@ -64,6 +95,7 @@
   "item.modestmining.rosegold_chestplate": "Rosegold Chestplate",
   "item.modestmining.rosegold_leggings": "Rosegold Leggings",
   "item.modestmining.rosegold_boots": "Rosegold Boots",
+
   "item.modestmining.prismarite_sword": "Prismarite Sword",
   "item.modestmining.prismarite_axe": "Prismarite Axe",
   "item.modestmining.prismarite_pickaxe": "Prismarite Pickaxe",
@@ -73,6 +105,20 @@
   "item.modestmining.prismarite_chestplate": "Prismarite Chestplate",
   "item.modestmining.prismarite_leggings": "Prismarite Leggings",
   "item.modestmining.prismarite_boots": "Prismarite Boots",
+
+  "item.modestmining.flint_hammer": "Flint Hammer",
+  "item.modestmining.wooden_hammer": "Wooden Hammer",
+  "item.modestmining.stone_hammer": "Stone Hammer",
+  "item.modestmining.golden_hammer": "Golden Hammer",
+  "item.modestmining.rosegold_hammer": "Rosegold Hammer",
+  "item.modestmining.iron_hammer": "Iron Hammer",
+  "item.modestmining.steel_hammer": "Steel Hammer",
+  "item.modestmining.diamond_hammer": "Diamond Hammer",
+  "item.modestmining.netherite_hammer": "Netherite Hammer",
+  "item.modestmining.prismarite_hammer": "Prismarite Hammer",
+
+  "item.modestmining.steel_glaive": "Steel Glaive",
+
 
   "block.modestmining.coke_block": "Block of Coke",
   "block.modestmining.coal_powder_block": "Block of Coal Powder",

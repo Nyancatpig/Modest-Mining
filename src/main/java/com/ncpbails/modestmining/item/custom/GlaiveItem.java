@@ -3,6 +3,7 @@ package com.ncpbails.modestmining.item.custom;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
 import net.minecraft.client.model.TridentModel;
+import net.minecraft.core.NonNullList;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -13,8 +14,8 @@ import net.minecraftforge.common.ForgeMod;
 
 import java.util.UUID;
 
-public class GlaiveItem extends TieredItem implements Vanishable {
-        private final float attackDamage;
+public class GlaiveItem extends TieredItem {
+    private final float attackDamage;
     private final Multimap<Attribute, AttributeModifier> defaultModifiers;
     protected static final UUID ATTACK_REACH_MODIFIER = UUID.fromString("3631c82c-22f0-4b2e-a7d5-253ea1f362c2");
 
@@ -28,6 +29,11 @@ public class GlaiveItem extends TieredItem implements Vanishable {
         this.defaultModifiers = builder.build();
     }
 
+    @Override
+    public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
+        return slot == EquipmentSlot.MAINHAND ? this.defaultModifiers : super.getAttributeModifiers(slot, stack);
+    }
+
     public float getDamage() {
         return this.attackDamage;
     }
@@ -37,10 +43,6 @@ public class GlaiveItem extends TieredItem implements Vanishable {
             p_43296_.broadcastBreakEvent(EquipmentSlot.MAINHAND);
         });
         return true;
-    }
-
-    public Multimap<Attribute, AttributeModifier> getDefaultAttributeModifiers(EquipmentSlot p_43274_) {
-        return p_43274_ == EquipmentSlot.MAINHAND ? this.defaultModifiers : super.getDefaultAttributeModifiers(p_43274_);
     }
 
     @Override

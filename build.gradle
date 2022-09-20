@@ -18,7 +18,9 @@ plugins {
     id 'maven-publish'
 }
 apply plugin: 'net.minecraftforge.gradle'
-
+apply plugin: 'eclipse'
+apply plugin: 'maven-publish'
+apply plugin: "org.spongepowered.mixin"
 
 version = '1.18.2-0.0.1'
 group = 'com.ncpbails.modestmining' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -176,6 +178,9 @@ dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.18.2:9.7.0.193")
     implementation fg.deobf('software.bernie.geckolib:geckolib-1.18-forge:3.0.13')
+
+    implementation fg.deobf("curse.maven:blueprint-382216:3991478")
+    implementation fg.deobf("curse.maven:savageandravage-381736:3881530")
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency

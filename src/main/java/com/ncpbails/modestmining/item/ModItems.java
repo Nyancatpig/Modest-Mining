@@ -3,6 +3,7 @@ package com.ncpbails.modestmining.item;
 import com.ncpbails.modestmining.ModestMining;
 import com.ncpbails.modestmining.entity.ModEntityTypes;
 import com.ncpbails.modestmining.item.custom.*;
+import com.teamabnormals.savage_and_ravage.common.item.CleaverOfBeheadingItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.crafting.RecipeType;

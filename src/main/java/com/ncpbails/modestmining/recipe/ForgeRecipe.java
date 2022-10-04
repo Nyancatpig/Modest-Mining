@@ -26,8 +26,7 @@ public class ForgeRecipe implements Recipe<SimpleContainer> {
     private final NonNullList<Ingredient> recipeItems;
     private final boolean isSimple;
 
-    public ForgeRecipe(ResourceLocation id, ItemStack output,
-                           NonNullList<Ingredient> recipeItems) {
+    public ForgeRecipe(ResourceLocation id, ItemStack output, NonNullList<Ingredient> recipeItems) {
         this.id = id;
         this.output = output;
         this.recipeItems = recipeItems;

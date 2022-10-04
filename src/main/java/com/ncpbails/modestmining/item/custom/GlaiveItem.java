@@ -1,7 +1,9 @@
 package com.ncpbails.modestmining.item.custom;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableMultimap;
 import com.google.common.collect.Multimap;
+import com.google.common.collect.Sets;
 import net.minecraft.client.model.TridentModel;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -16,22 +18,22 @@ import java.util.UUID;
 
 public class GlaiveItem extends TieredItem {
     private final float attackDamage;
-    private final Multimap<Attribute, AttributeModifier> defaultModifiers;
-    protected static final UUID ATTACK_REACH_MODIFIER = UUID.fromString("3631c82c-22f0-4b2e-a7d5-253ea1f362c2");
+    private final Multimap<Attribute, AttributeModifier> toolAttributes;
+    protected static final UUID ATTACK_REACH_MODIFIER = UUID.fromString("63d316c1-7d6d-41be-81c3-41fc1a216c27");
 
-    public GlaiveItem(Tier tier, int damage, float speed, float attackReach, Properties properties) {
+    public GlaiveItem(Tier tier, int damage, float speed, float reach, Properties properties) {
         super(tier, properties);
         this.attackDamage = (float)damage + tier.getAttackDamageBonus();
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
-        //builder.put(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(ATTACK_REACH_MODIFIER,"Weapon modifier", attackReach, AttributeModifier.Operation.ADDITION));
-        builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", (double)this.attackDamage, AttributeModifier.Operation.ADDITION));
-        builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", (double)speed, AttributeModifier.Operation.ADDITION));
-        this.defaultModifiers = builder.build();
+        builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", this.attackDamage, AttributeModifier.Operation.ADDITION));
+        builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", speed, AttributeModifier.Operation.ADDITION));
+        //builder.put(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(ATTACK_REACH_MODIFIER, "Weapon modifier", reach, AttributeModifier.Operation.ADDITION));
+        this.toolAttributes = builder.build();
     }
 
     @Override
     public Multimap<Attribute, AttributeModifier> getAttributeModifiers(EquipmentSlot slot, ItemStack stack) {
-        return slot == EquipmentSlot.MAINHAND ? this.defaultModifiers : super.getAttributeModifiers(slot, stack);
+        return slot == EquipmentSlot.MAINHAND ? this.toolAttributes : super.getAttributeModifiers(slot, stack);
     }
 
     public float getDamage() {

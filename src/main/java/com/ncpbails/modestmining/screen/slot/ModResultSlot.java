@@ -1,4 +1,4 @@
-package com.ncpbails.modestmining.integration.screen.slot;
+package com.ncpbails.modestmining.screen.slot;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.IItemHandler;

@@ -2,6 +2,7 @@ package com.ncpbails.modestmining.integration;
 
 import com.ncpbails.modestmining.ModestMining;
 import com.ncpbails.modestmining.block.ModBlocks;
+import com.ncpbails.modestmining.item.ModItems;
 import com.ncpbails.modestmining.recipe.ForgeRecipe;
 import mezz.jei.api.constants.VanillaTypes;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
@@ -14,6 +15,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import javax.annotation.Nonnull;
 
@@ -65,7 +67,7 @@ public class ForgingRecipeCategory implements IRecipeCategory<ForgeRecipe> {
         builder.addSlot(RecipeIngredientRole.INPUT, 39, 38).addIngredients(recipe.getIngredients().get(5));
         builder.addSlot(RecipeIngredientRole.INPUT, 57, 38).addIngredients(recipe.getIngredients().get(6));
         builder.addSlot(RecipeIngredientRole.INPUT, 75, 38).addIngredients(recipe.getIngredients().get(7));
+        builder.addSlot(RecipeIngredientRole.INPUT, 75, 62).addIngredients(Ingredient.of(ModItems.COKE.get()));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 135, 30).addItemStack(recipe.getResultItem());
-        builder.addSlot(RecipeIngredientRole.INPUT, 75, 38).addIngredients(recipe.getIngredients().get(9));
     }
 }

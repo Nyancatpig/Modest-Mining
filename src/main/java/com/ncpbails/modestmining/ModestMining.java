@@ -7,8 +7,8 @@ import com.ncpbails.modestmining.entity.ModEntityTypes;
 import com.ncpbails.modestmining.entity.client.ClamRenderer;
 import com.ncpbails.modestmining.item.ModItems;
 import com.ncpbails.modestmining.recipe.ModRecipes;
-import com.ncpbails.modestmining.integration.screen.ForgeScreen;
-import com.ncpbails.modestmining.integration.screen.ModMenuTypes;
+import com.ncpbails.modestmining.screen.ForgeScreen;
+import com.ncpbails.modestmining.screen.ModMenuTypes;
 import com.ncpbails.modestmining.util.ModItemProperties;
 import com.ncpbails.modestmining.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -49,9 +49,7 @@ public class ModestMining
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
-
         GeckoLib.initialize();
-
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }

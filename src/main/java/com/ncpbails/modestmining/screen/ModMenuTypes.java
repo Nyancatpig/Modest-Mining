@@ -1,4 +1,4 @@
-package com.ncpbails.modestmining.integration.screen;
+package com.ncpbails.modestmining.screen;
 
 import com.ncpbails.modestmining.ModestMining;
 import net.minecraft.world.inventory.AbstractContainerMenu;

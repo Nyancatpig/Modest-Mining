@@ -3,7 +3,7 @@ package com.ncpbails.modestmining.block.entity.custom;
 import com.ncpbails.modestmining.block.entity.ModBlockEntities;
 import com.ncpbails.modestmining.item.ModItems;
 import com.ncpbails.modestmining.recipe.ForgeRecipe;
-import com.ncpbails.modestmining.integration.screen.ForgeMenu;
+import com.ncpbails.modestmining.screen.ForgeMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -16,6 +16,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -31,13 +32,15 @@ import org.jetbrains.annotations.Nullable;
 import javax.annotation.Nonnull;
 import java.util.Optional;
 
+import static com.ncpbails.modestmining.block.custom.ForgeBlock.LIT;
+
 public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
 
     protected final ContainerData data;
     private int progress = 0;
     private int maxProgress = 72;
     private int litTime = 0;
-
+    static int countOutput = 1;
     private final ItemStackHandler itemHandler = new ItemStackHandler(10) {
         @Override
         protected void onContentsChanged(int slot) {
@@ -154,6 +157,15 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
             pBlockEntity.resetProgress();
             setChanged(pLevel, pPos, pState);
         }
+        if (pBlockEntity.progress > 0)
+        {
+            pLevel.setBlock(pPos, pState.setValue(LIT, Boolean.valueOf(true)), 3);
+        }
+        else
+        {
+            pLevel.setBlock(pPos, pState.setValue(LIT, Boolean.valueOf(false)), 3);
+        }
+
     }
 
     private static boolean hasRecipe(ForgeBlockEntity entity) {
@@ -169,10 +181,8 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
         return match.isPresent()
                 && inventory.getItem(9).is(ModItems.COKE.get()) && (
                     inventory.getItem(8).isEmpty()
-                            || (
-                                    inventory.getItem(8).is(match.get().getResultItem().getItem())
-                                            && inventory.getItem(8).getMaxStackSize() > inventory.getItem(8).getCount()
-                               )
+                            || inventory.getItem(8).is(match.get().getResultItem().getItem())
+                                    && inventory.getItem(8).getMaxStackSize() > inventory.getItem(8).getCount()
 
                 );
     }
@@ -204,13 +214,20 @@ public class ForgeBlockEntity extends BlockEntity implements MenuProvider {
 
             entity.itemHandler.extractItem(9,1, false);
 
-            entity.itemHandler.setStackInSlot(8, new ItemStack(match.get().getResultItem().getItem(),
-                    entity.itemHandler.getStackInSlot(8).getCount() + 1));
+
+            inventory.getItem(8).is(match.get().getResultItem().getItem());
+
+                entity.itemHandler.setStackInSlot(8, new ItemStack(match.get().getResultItem().getItem(),
+                        entity.itemHandler.getStackInSlot(8).getCount() + entity.getTheCount(match.get().getResultItem())));
 
             entity.resetProgress();
         }
     }
 
+    private int getTheCount (ItemStack itemIn)
+    {
+        return itemIn.getCount();
+    }
     private void resetProgress() {
         this.progress = 0;
     }

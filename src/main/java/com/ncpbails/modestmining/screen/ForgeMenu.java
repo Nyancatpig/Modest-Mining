@@ -1,8 +1,8 @@
-package com.ncpbails.modestmining.integration.screen;
+package com.ncpbails.modestmining.screen;
 
 import com.ncpbails.modestmining.block.ModBlocks;
 import com.ncpbails.modestmining.block.entity.custom.ForgeBlockEntity;
-import com.ncpbails.modestmining.integration.screen.slot.ModResultSlot;
+import com.ncpbails.modestmining.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -54,7 +54,7 @@ public class ForgeMenu extends AbstractContainerMenu {
     }
 
     public boolean isFueled() {
-        return data.get(2) > 0;
+        return data.get(0) > 0;
     }
 
     public int getScaledProgress() {

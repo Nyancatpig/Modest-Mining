@@ -106,7 +106,7 @@
   "item.modestmining.prismarite_leggings": "Prismarite Leggings",
   "item.modestmining.prismarite_boots": "Prismarite Boots",
 
-  "item.modestmining.flint_hammer": "Flint Hammer",
+  "item.modestmining.flint_mallet": "Flint Mallet",
   "item.modestmining.wooden_hammer": "Wooden Hammer",
   "item.modestmining.stone_hammer": "Stone Hammer",
   "item.modestmining.golden_hammer": "Golden Hammer",
@@ -118,6 +118,17 @@
   "item.modestmining.prismarite_hammer": "Prismarite Hammer",
 
   "item.modestmining.steel_glaive": "Steel Glaive",
+
+  "item.modestmining.flint_mountain_hatchet": "Flint Mountain Hatchet",
+  "item.modestmining.wooden_mountain_axe": "Wooden Mountain Axe",
+  "item.modestmining.stone_mountain_axe": "Stone Mountain Axe",
+  "item.modestmining.golden_mountain_axe": "Golden Mountain Axe",
+  "item.modestmining.rosegold_mountain_axe": "Rosegold Mountain Axe",
+  "item.modestmining.iron_mountain_axe": "Iron Mountain Axe",
+  "item.modestmining.steel_mountain_axe": "Steel Mountain Axe",
+  "item.modestmining.diamond_mountain_axe": "Diamond Mountain Axe",
+  "item.modestmining.netherite_mountain_axe": "Netherite Mountain Axe",
+  "item.modestmining.prismarite_mountain_axe": "Prismarite Mountain Axe",
 
 
   "block.modestmining.coke_block": "Block of Coke",

@@ -298,7 +298,7 @@ public class ModItems {
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
 
-    public static final RegistryObject<Item> STEEL_GLAIVE = ITEMS.register("steel_glaive", () -> new GlaiveItem(ModTiers.STEEL, 3, -2.4f, 2.0f,
+    public static final RegistryObject<Item> STEEL_GLAIVE = ITEMS.register("steel_glaive", () -> new GlaiveItem(ModTiers.STEEL, 3, -2.4f, 20.0f,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
 

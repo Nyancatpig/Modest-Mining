@@ -10,7 +10,7 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "minecraft:diamond"
+      "tag": "modestmining:diamond_pieces"
     }
   },
   "result": {

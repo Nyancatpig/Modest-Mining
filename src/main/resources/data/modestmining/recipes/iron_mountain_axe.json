@@ -10,7 +10,7 @@
       "item": "minecraft:stick"
     },
     "X": {
-      "item": "minecraft:iron_ingot"
+      "tag": "modestmining:iron_pieces"
     }
   },
   "result": {

@@ -27,7 +27,7 @@ public class GlaiveItem extends TieredItem {
     private final float speed;
     private final float reach;
 
-    protected static final UUID ATTACK_REACH_MODIFIER = UUID.fromString("63d316c1-7d6d-41be-81c3-41fc1a216c27");
+    protected static final UUID ATTACK_RANGE_MODIFIER = UUID.fromString("63d316c1-7d6d-41be-81c3-41fc1a216c27");
     private Supplier<Multimap<Attribute, AttributeModifier>> toolAttributes = Suppliers.memoize(this::createDefaultAttributes);
 
     public GlaiveItem(Tier tier, int damage, float speedIn, float reachIn, Properties properties) {
@@ -43,7 +43,7 @@ public class GlaiveItem extends TieredItem {
         ImmutableMultimap.Builder<Attribute, AttributeModifier> builder = ImmutableMultimap.builder();
         builder.put(Attributes.ATTACK_DAMAGE, new AttributeModifier(BASE_ATTACK_DAMAGE_UUID, "Weapon modifier", this.attackDamage, AttributeModifier.Operation.ADDITION));
         builder.put(Attributes.ATTACK_SPEED, new AttributeModifier(BASE_ATTACK_SPEED_UUID, "Weapon modifier", this.speed, AttributeModifier.Operation.ADDITION));
-        builder.put(ForgeMod.REACH_DISTANCE.get(), new AttributeModifier(ATTACK_REACH_MODIFIER, "Weapon modifier", this.reach, AttributeModifier.Operation.ADDITION));
+        builder.put(ForgeMod.ATTACK_RANGE.get(), new AttributeModifier(ATTACK_RANGE_MODIFIER, "Weapon modifier", this.reach, AttributeModifier.Operation.ADDITION));
         return builder.build();
     }
     @Override

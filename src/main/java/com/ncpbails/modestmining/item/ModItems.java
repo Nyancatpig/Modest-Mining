@@ -298,7 +298,65 @@ public class ModItems {
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
 
-    public static final RegistryObject<Item> STEEL_GLAIVE = ITEMS.register("steel_glaive", () -> new GlaiveItem(ModTiers.STEEL, 3, -2.4f, 20.0f,
+    public static final RegistryObject<Item> FLINT_POLEAXE = ITEMS.register("flint_poleaxe", () -> new GlaiveItem(ModTiers.FLINT, 1, -3.6f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> WOODEN_GLAIVE = ITEMS.register("wooden_glaive", () -> new GlaiveItem(Tiers.WOOD, 3, -3.5f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> STONE_GLAIVE = ITEMS.register("stone_glaive", () -> new GlaiveItem(Tiers.STONE, 3, -3.5f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> GOLDEN_GLAIVE = ITEMS.register("golden_glaive", () -> new GlaiveItem(Tiers.GOLD, 3, -3.5f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> ROSEGOLD_GLAIVE = ITEMS.register("rosegold_glaive", () -> new GlaiveItem(ModTiers.ROSEGOLD, 3, -3.4f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> IRON_GLAIVE = ITEMS.register("iron_glaive", () -> new GlaiveItem(Tiers.IRON, 3, -3.4f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> STEEL_GLAIVE = ITEMS.register("steel_glaive", () -> new GlaiveItem(ModTiers.STEEL, 3, -3.4f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> DIAMOND_GLAIVE = ITEMS.register("diamond_glaive", () -> new GlaiveItem(Tiers.DIAMOND, 3, -3.3f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> NETHERITE_GLAIVE = ITEMS.register("netherite_glaive", () -> new GlaiveItem(Tiers.NETHERITE, 3, -3.3f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> PRISMARITE_GLAIVE = ITEMS.register("prismarite_glaive", () -> new GlaiveItem(ModTiers.PRISMARITE, 3, -3.3f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+
+    public static final RegistryObject<Item> FLINT_TANTO = ITEMS.register("flint_tanto", () -> new KatanaItem(ModTiers.FLINT, 0, -3.3f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> WOODEN_KATANA = ITEMS.register("wooden_katana", () -> new KatanaItem(Tiers.WOOD, 2, -2.9f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> STONE_KATANA = ITEMS.register("stone_katana", () -> new KatanaItem(Tiers.STONE, 2, -2.9f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> GOLDEN_KATANA = ITEMS.register("golden_katana", () -> new KatanaItem(Tiers.GOLD, 2, -2.9f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> ROSEGOLD_KATANA = ITEMS.register("rosegold_katana", () -> new KatanaItem(ModTiers.ROSEGOLD, 2, -2.7f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> IRON_KATANA = ITEMS.register("iron_katana", () -> new KatanaItem(Tiers.IRON, 2, -2.8f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> STEEL_KATANA = ITEMS.register("steel_katana", () -> new KatanaItem(ModTiers.STEEL, 2, -2.7f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> DIAMOND_KATANA = ITEMS.register("diamond_katana", () -> new KatanaItem(Tiers.DIAMOND, 2, -2.7f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> NETHERITE_KATANA = ITEMS.register("netherite_katana", () -> new KatanaItem(Tiers.NETHERITE, 2, -2.7f, 3.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> PRISMARITE_KATANA = ITEMS.register("prismarite_katana", () -> new KatanaItem(ModTiers.PRISMARITE, 2, -2.7f, 3.0f,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
 
@@ -331,6 +389,38 @@ public class ModItems {
 
     public static final RegistryObject<Item> PRISMARITE_MOUNTAIN_AXE = ITEMS.register("prismarite_mountain_axe", () -> new PickaxeItem(ModTiers.MOUNTAIN_PRISMARITE, 1, -2.8f,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+
+    public static final RegistryObject<Item> FLINT_BLUDGEON = ITEMS.register("flint_bludgeon", () -> new MaceItem(ModTiers.FLINT, 0, -3.5f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> WOODEN_MACE = ITEMS.register("wooden_mace", () -> new MaceItem(Tiers.WOOD, 1, -3.4f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> STONE_MACE = ITEMS.register("stone_mace", () -> new MaceItem(Tiers.STONE, 1, -3.4f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> GOLDEN_MACE = ITEMS.register("golden_mace", () -> new MaceItem(Tiers.GOLD, 1, -3.4f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> ROSEGOLD_MACE = ITEMS.register("rosegold_mace", () -> new MaceItem(ModTiers.ROSEGOLD, 1, -3.3f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> IRON_MACE = ITEMS.register("iron_mace", () -> new MaceItem(Tiers.IRON, 1, -3.3f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> STEEL_MACE = ITEMS.register("steel_mace", () -> new MaceItem(ModTiers.STEEL, 1, -3.3f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> DIAMOND_MACE = ITEMS.register("diamond_mace", () -> new MaceItem(Tiers.DIAMOND, 1, -3.2f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> NETHERITE_MACE = ITEMS.register("netherite_mace", () -> new MaceItem(Tiers.NETHERITE, 1, -3.2f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
+    public static final RegistryObject<Item> PRISMARITE_MACE = ITEMS.register("prismarite_mace", () -> new MaceItem(ModTiers.PRISMARITE, 1, -3.2f, 2.0f, 2.0f,
+            new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

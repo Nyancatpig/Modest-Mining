@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,lit=false": {
       "model": "modestmining:block/forge",
       "y": 90
     },
-    "facing=north": {
+    "facing=east,lit=true": {
+      "model": "modestmining:block/forge_lit",
+      "y": 90
+    },
+    "facing=north,lit=false": {
       "model": "modestmining:block/forge"
     },
-    "facing=south": {
+    "facing=north,lit=true": {
+      "model": "modestmining:block/forge_lit"
+    },
+    "facing=south,lit=false": {
       "model": "modestmining:block/forge",
       "y": 180
     },
-    "facing=west": {
+    "facing=south,lit=true": {
+      "model": "modestmining:block/forge_lit",
+      "y": 180
+    },
+    "facing=west,lit=false": {
       "model": "modestmining:block/forge",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "modestmining:block/forge_lit",
       "y": 270
     }
   }

@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X@X",
-    " # ",
-    " # "
+    " &X",
+    " #&",
+    "#  "
   ],
   "key": {
     "#": {
@@ -12,11 +12,11 @@
     "X": {
       "tag": "minecraft:logs"
     },
-    "@": {
-      "tag": "minecraft:planks"
+    "&": {
+      "item": "modestmining:plank"
     }
   },
   "result": {
-    "item": "modestmining:wooden_hammer"
+    "item": "modestmining:wooden_mace"
   }
 }

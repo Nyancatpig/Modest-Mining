@@ -1,22 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X@X",
-    " # ",
-    " # "
+    " &X",
+    " #&",
+    "#  "
   ],
   "key": {
     "#": {
       "item": "minecraft:stick"
     },
     "X": {
-      "tag": "minecraft:logs"
+      "item": "minecraft:diamond_block"
     },
-    "@": {
-      "tag": "minecraft:planks"
+    "&": {
+      "item": "modestmining:diamond_piece"
     }
   },
   "result": {
-    "item": "modestmining:wooden_hammer"
+    "item": "modestmining:diamond_mace"
   }
 }

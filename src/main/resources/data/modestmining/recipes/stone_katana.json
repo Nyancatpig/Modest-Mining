@@ -1,22 +1,22 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X@X",
-    " # ",
-    " # "
+    " XX",
+    "@# ",
+    "#  "
   ],
   "key": {
     "#": {
       "item": "minecraft:stick"
     },
     "X": {
-      "tag": "minecraft:logs"
+      "tag": "minecraft:stone_tool_materials"
     },
     "@": {
-      "tag": "minecraft:planks"
+      "item": "modestmining:rocks"
     }
   },
   "result": {
-    "item": "modestmining:wooden_hammer"
+    "item": "modestmining:stone_katana"
   }
 }

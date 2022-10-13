@@ -254,16 +254,16 @@ public class ModItems {
     public static final RegistryObject<Item> PRISMARITE_HOE = ITEMS.register("prismarite_hoe", () -> new HoeItem(ModTiers.PRISMARITE, -4, 0f,
             new Item.Properties().tab(CreativeModeTab.TAB_TOOLS)));
 
-    public static final RegistryObject<Item> PRISMARITE_HELMET = ITEMS.register("prismarite_helmet", () -> new ArmorItem(ModArmourMaterials.PRISMARITE, EquipmentSlot.HEAD,
+    public static final RegistryObject<Item> PRISMARITE_HELMET = ITEMS.register("prismarite_helmet", () -> new ModArmorItem(ModArmourMaterials.PRISMARITE, EquipmentSlot.HEAD,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
-    public static final RegistryObject<Item> PRISMARITE_CHESTPLATE = ITEMS.register("prismarite_chestplate", () -> new ArmorItem(ModArmourMaterials.PRISMARITE, EquipmentSlot.CHEST,
+    public static final RegistryObject<Item> PRISMARITE_CHESTPLATE = ITEMS.register("prismarite_chestplate", () -> new ModArmorItem(ModArmourMaterials.PRISMARITE, EquipmentSlot.CHEST,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
-    public static final RegistryObject<Item> PRISMARITE_LEGGINGS = ITEMS.register("prismarite_leggings", () -> new ArmorItem(ModArmourMaterials.PRISMARITE, EquipmentSlot.LEGS,
+    public static final RegistryObject<Item> PRISMARITE_LEGGINGS = ITEMS.register("prismarite_leggings", () -> new ModArmorItem(ModArmourMaterials.PRISMARITE, EquipmentSlot.LEGS,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
-    public static final RegistryObject<Item> PRISMARITE_BOOTS = ITEMS.register("prismarite_boots", () -> new ArmorItem(ModArmourMaterials.PRISMARITE, EquipmentSlot.FEET,
+    public static final RegistryObject<Item> PRISMARITE_BOOTS = ITEMS.register("prismarite_boots", () -> new ModArmorItem(ModArmourMaterials.PRISMARITE, EquipmentSlot.FEET,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
 
 

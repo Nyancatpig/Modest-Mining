@@ -3,6 +3,7 @@ package com.ncpbails.modestmining;
 import com.mojang.logging.LogUtils;
 import com.ncpbails.modestmining.block.ModBlocks;
 import com.ncpbails.modestmining.block.entity.ModBlockEntities;
+import com.ncpbails.modestmining.effect.ModEffects;
 import com.ncpbails.modestmining.entity.ModEntityTypes;
 import com.ncpbails.modestmining.entity.client.ClamRenderer;
 import com.ncpbails.modestmining.item.ModItems;
@@ -39,6 +40,7 @@ public class ModestMining
         // Register the setup method for modloading
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModEffects.register(eventBus);
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         ModBlockEntities.register(eventBus);

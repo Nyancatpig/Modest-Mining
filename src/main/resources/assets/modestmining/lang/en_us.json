@@ -181,5 +181,7 @@
   "block.modestmining.ancient_dirt": "Dirt",
   "block.modestmining.ancient_gravel": "Gravel",
 
-  "block.minecraft.amethyst_block": "Amethyst Block"
+  "block.minecraft.amethyst_block": "Amethyst Block",
+
+  "effect.modestmining.prismarite_speed": "Prismarite Speed"
 }

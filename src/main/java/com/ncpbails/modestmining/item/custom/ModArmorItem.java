@@ -18,7 +18,7 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ModArmourMaterials.PRISMARITE,
-                            new MobEffectInstance(ModEffects.PRISMARITE_SPEED.get(), 200, 1, true, true)).build();
+                            new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 200, 1, true, true)).build();
 
     public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);

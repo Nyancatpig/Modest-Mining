@@ -1,11 +1,14 @@
 package com.ncpbails.modestmining.item;
 
 import com.ncpbails.modestmining.ModestMining;
+import com.ncpbails.modestmining.effect.ModEffects;
 import com.ncpbails.modestmining.entity.ModEntityTypes;
 import com.ncpbails.modestmining.item.custom.*;
 import com.teamabnormals.savage_and_ravage.common.item.CleaverOfBeheadingItem;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -420,7 +423,6 @@ public class ModItems {
 
     public static final RegistryObject<Item> PRISMARITE_MACE = ITEMS.register("prismarite_mace", () -> new MaceItem(ModTiers.PRISMARITE, 1, -3.2f, 2.0f, 2.0f,
             new Item.Properties().tab(CreativeModeTab.TAB_COMBAT)));
-
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

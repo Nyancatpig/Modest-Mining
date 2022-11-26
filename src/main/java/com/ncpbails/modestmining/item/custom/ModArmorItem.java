@@ -13,12 +13,18 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
 import java.util.Map;
+import java.util.function.Supplier;
 
 public class ModArmorItem extends ArmorItem {
-    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
+    //private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
+    //        (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
+    //                .put(ModArmourMaterials.PRISMARITE,
+    //                       new MobEffectInstance(ModEffects.PRISMARITE_SPEED.get(), 200, 1, true, true)).build();
+
+    private static final Map<ArmorMaterial, Supplier<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
                     .put(ModArmourMaterials.PRISMARITE,
-                            new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 200, 1, true, true)).build();
+                            () -> new MobEffectInstance(ModEffects.PRISMARITE_SPEED.get(), 200, 1, true, true)).build();
 
     public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
         super(material, slot, settings);
@@ -51,10 +57,6 @@ public class ModArmorItem extends ArmorItem {
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
             player.addEffect(new MobEffectInstance(mapStatusEffect.getEffect(),
                     mapStatusEffect.getDuration(), mapStatusEffect.getAmplifier()));
-
-            //if(new Random().nextFloat() > 0.6f) { // 40% of damaging the armor! Possibly!
-            //    player.getInventory().hurtArmor(DamageSource.MAGIC, 1f, new int[]{0, 1, 2, 3});
-            //}
         }
     }
 

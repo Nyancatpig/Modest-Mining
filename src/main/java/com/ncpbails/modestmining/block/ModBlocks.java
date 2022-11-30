@@ -88,6 +88,12 @@ public class ModBlocks {
             () -> new ShellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY)
                     .strength(0.5f, 0.5f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC, false, 0);
 
+    public static final RegistryObject<Block> VARIED_PLANKS = registerBlock("varied_planks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 60; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
+            }, CreativeModeTab.TAB_BUILDING_BLOCKS, true, 300);
 
 
     public static final RegistryObject<Block> OAK_PILLAR = registerBlock("oak_pillar",

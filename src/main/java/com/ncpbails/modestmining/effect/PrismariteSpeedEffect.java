@@ -11,10 +11,10 @@ import net.minecraftforge.common.ForgeMod;
 
 import java.util.Map;
 
-public class PrismariteEffect extends MobEffect {
-    public PrismariteEffect(MobEffectCategory mobEffectCategory, int color) {
+public class PrismariteSpeedEffect extends MobEffect {
+    public PrismariteSpeedEffect(MobEffectCategory mobEffectCategory, int color) {
         super(mobEffectCategory, color);
-        this.addAttributeModifier(ForgeMod.SWIM_SPEED.get(), "7107DE5E-7CE8-4030-940E-514C1F160890", 0.0F, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        this.addAttributeModifier(ForgeMod.SWIM_SPEED.get(), "caad9384-d4b6-43eb-88e6-a35826628f7c", 0.0F, AttributeModifier.Operation.MULTIPLY_TOTAL);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class PrismariteEffect extends MobEffect {
     public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMapIn, int amplifier) {
         if (!entity.level.isClientSide) {
             int duration = entity.getEffect(ModEffects.PRISMARITE_SPEED.get()).getDuration();
-            int totalDuration = entity.getPersistentData().contains("SugarRushDuration") ? entity.getPersistentData().getInt("SugarRushDuration") : 0;
+            int totalDuration = entity.getPersistentData().contains("SpeedDuration") ? entity.getPersistentData().getInt("SpeedDuration") : 0;
             float amount = duration >= totalDuration / 3 ? (amplifier + 2) * 0.5F : -(amplifier + 2) * 1.25F;
             for (Map.Entry<Attribute, AttributeModifier> entry : this.getAttributeModifiers().entrySet()) {
                 AttributeInstance iattributeinstance = attributeMapIn.getInstance(entry.getKey());

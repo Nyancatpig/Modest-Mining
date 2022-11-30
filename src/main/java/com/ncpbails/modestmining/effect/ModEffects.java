@@ -13,7 +13,10 @@ public class ModEffects {
             = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, ModestMining.MOD_ID);
 
     public static final RegistryObject<MobEffect> PRISMARITE_SPEED = MOB_EFFECTS.register("prismarite_speed",
-            () -> new PrismariteEffect(MobEffectCategory.BENEFICIAL, 1268330));
+            () -> new PrismariteSpeedEffect(MobEffectCategory.BENEFICIAL, 1268330));
+
+    public static final RegistryObject<MobEffect> PRISMARITE_STRENGTH = MOB_EFFECTS.register("prismarite_strength",
+            () -> new PrismariteStrengthEffect(MobEffectCategory.BENEFICIAL, 1268330));
 
     public static void register(IEventBus eventBus) {
         MOB_EFFECTS.register(eventBus);

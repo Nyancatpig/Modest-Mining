@@ -2,19 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "modestmining:rocks"
-    },
-    {
-      "item": "modestmining:rocks"
-    },
-    {
-      "item": "modestmining:rocks"
-    },
-    {
-      "item": "modestmining:rocks"
+      "item": "minecraft:cobblestone"
     }
   ],
   "result": {
-    "item": "minecraft:cobblestone"
+    "item": "modestmining:rocks",
+    "count": 4
   }
 }

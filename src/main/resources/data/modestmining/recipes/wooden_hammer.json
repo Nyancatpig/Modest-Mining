@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X",
-    "#",
-    "#"
+    "FXF",
+    " # ",
+    " # "
   ],
   "key": {
     "#": {
@@ -11,6 +11,9 @@
     },
     "X": {
       "tag": "minecraft:logs"
+    },
+    "F": {
+      "item": "modestmining:fiber"
     }
   },
   "result": {

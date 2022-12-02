@@ -22,7 +22,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: "org.spongepowered.mixin"
 
-version = '1.18.2-0.1'
+version = '1.18.2-0.1.2'
 group = 'com.ncpbails.modestmining' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'modestmining'
 
@@ -180,6 +180,7 @@ dependencies {
     implementation fg.deobf('software.bernie.geckolib:geckolib-1.18-forge:3.0.13')
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:3927564")
     runtimeOnly fg.deobf("curse.maven:geckolib-388172:4096656")
+    runtimeOnly fg.deobf("curse.maven:oreganized-439153:3958338")
 
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
@@ -200,7 +201,7 @@ jar {
         attributes([
                 "Specification-Title"     : "modestmining",
                 "Specification-Vendor"    : "ncpbails",
-                "Specification-Version"   : "0.1", // We are version 1 of ourselves
+                "Specification-Version"   : "0.1.2", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "ncpbails",

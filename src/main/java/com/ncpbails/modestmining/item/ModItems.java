@@ -4,7 +4,6 @@ import com.ncpbails.modestmining.ModestMining;
 import com.ncpbails.modestmining.effect.ModEffects;
 import com.ncpbails.modestmining.entity.ModEntityTypes;
 import com.ncpbails.modestmining.item.custom.*;
-import com.teamabnormals.savage_and_ravage.common.item.CleaverOfBeheadingItem;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;

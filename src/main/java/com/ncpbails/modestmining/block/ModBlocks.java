@@ -5,6 +5,7 @@ import com.ncpbails.modestmining.block.custom.BrushingBlock;
 import com.ncpbails.modestmining.block.custom.ChiselingBlock;
 import com.ncpbails.modestmining.block.custom.ForgeBlock;
 
+import com.ncpbails.modestmining.block.entity.custom.RockBlock;
 import com.ncpbails.modestmining.block.entity.custom.ShellBlock;
 import com.ncpbails.modestmining.item.ModItems;
 import net.minecraft.core.BlockPos;
@@ -85,7 +86,7 @@ public class ModBlocks {
                     .strength(0.5f, 0.5f)), CreativeModeTab.TAB_MISC, false, 0);
 
     public static final RegistryObject<Block> ROCKS = registerBlock("rocks",
-            () -> new ShellBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY)
+            () -> new RockBlock(BlockBehaviour.Properties.of(Material.STONE, MaterialColor.COLOR_GRAY)
                     .strength(0.5f, 0.5f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC, false, 0);
 
     public static final RegistryObject<Block> VARIED_PLANKS = registerBlock("varied_planks",

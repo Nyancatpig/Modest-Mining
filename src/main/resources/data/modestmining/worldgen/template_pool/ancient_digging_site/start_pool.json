@@ -1,13 +1,28 @@
 {
-  "name": "modestmining:ancient_dig_site",
-  "fallback": "modestmining:ancient_dig_site",
+
+  "name": "modestmining:ancient_digging_site/start_pool",
+
+
+  "fallback": "minecraft:empty",
+
+
   "elements": [
     {
+
+
       "weight": 1,
       "element": {
-        "location": "modestmining:ancient_dig_site",
+
+
+        "location": "modestmining:ancient_digging_site",
+
+
         "processors": "minecraft:empty",
+
+
         "projection": "rigid",
+
+
         "element_type": "minecraft:single_pool_element"
       }
     }

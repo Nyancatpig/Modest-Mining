@@ -122,6 +122,15 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.CLAM,0xdeac87, 0x9e5543,
                     new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 
+    public static final RegistryObject<Item> ENCHANTED_ROSEGOLD_APPLE = ITEMS.register("enchanted_rosegold_apple",
+            () -> new EnchantedGoldenAppleItem(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).rarity(Rarity.EPIC).food(ModFoods.ENCHANTED_ROSEGOLD_APPLE)));
+
+    public static final RegistryObject<Item> ROSEGOLD_APPLE = ITEMS.register("rosegold_apple",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).rarity(Rarity.RARE).food(ModFoods.ROSEGOLD_APPLE)));
+
+    public static final RegistryObject<Item> ROSEGOLD_CARROT = ITEMS.register("rosegold_carrot",
+            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_FOOD).food(ModFoods.ROSEGOLD_CARROT)));
+
     //TOOLS                                                                                                                            attack      speed
     public static final RegistryObject<Item> COPPER_BOW = ITEMS.register("copper_bow", () -> new CopperBowItem(new Item.Properties().tab(CreativeModeTab.TAB_COMBAT).durability(600)));
 

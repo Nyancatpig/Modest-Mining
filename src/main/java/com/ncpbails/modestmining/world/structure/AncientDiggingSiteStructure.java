@@ -1,11 +1,9 @@
+
 package com.ncpbails.modestmining.world.structure;
-import com.mojang.serialization.Codec;
-import com.ncpbails.modestmining.ModestMining;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.levelgen.feature.RuinedPortalFeature;
 import net.minecraft.world.level.levelgen.feature.StructureFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.JigsawConfiguration;
 import net.minecraft.world.level.levelgen.structure.BuiltinStructureSets;
@@ -14,15 +12,14 @@ import net.minecraft.world.level.levelgen.structure.PostPlacementProcessor;
 import net.minecraft.world.level.levelgen.structure.pieces.PieceGenerator;
 import net.minecraft.world.level.levelgen.structure.pieces.PieceGeneratorSupplier;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
-import org.apache.logging.log4j.Level;
 
 import java.util.Optional;
 
-public class AncientDigSiteStructure extends StructureFeature<JigsawConfiguration> {
+public class AncientDiggingSiteStructure extends StructureFeature<JigsawConfiguration> {
 
-    public AncientDigSiteStructure() {
+    public AncientDiggingSiteStructure() {
         // Create the pieces layout of the structure and give it to the game
-        super(JigsawConfiguration.CODEC, AncientDigSiteStructure::createPiecesGenerator, PostPlacementProcessor.NONE);
+        super(JigsawConfiguration.CODEC, AncientDiggingSiteStructure::createPiecesGenerator, PostPlacementProcessor.NONE);
     }
 
     /**
@@ -76,7 +73,7 @@ public class AncientDigSiteStructure extends StructureFeature<JigsawConfiguratio
 
         // Check if the spot is valid for our structure. This is just as another method for cleanness.
         // Returning an empty optional tells the game to skip this spot as it will not generate the structure.
-        if (!AncientDigSiteStructure.isFeatureChunk(context)) {
+        if (!AncientDiggingSiteStructure.isFeatureChunk(context)) {
             return Optional.empty();
         }
 

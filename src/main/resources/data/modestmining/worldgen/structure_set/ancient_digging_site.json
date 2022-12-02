@@ -1,14 +1,22 @@
 {
+
   "structures": [
     {
-      "structure": "modestmining:ancient_dig_site",
+      "structure": "modestmining:ancient_digging_site",
       "weight": 1
     }
   ],
   "placement": {
-    "spacing": 20,
-    "separation": 6,
+
     "salt": 1333135534,
+
+
+    "spacing": 20,
+
+
+    "separation": 6,
+
+
     "type": "minecraft:random_spread"
   }
 }

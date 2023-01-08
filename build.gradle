@@ -22,7 +22,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: "org.spongepowered.mixin"
 
-version = '1.18.2-0.1.2'
+version = '1.18.2-0.1.3'
 group = 'com.ncpbails.modestmining' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'modestmining'
 
@@ -181,8 +181,8 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:appleskin-248787:3927564")
     runtimeOnly fg.deobf("curse.maven:geckolib-388172:4096656")
     runtimeOnly fg.deobf("curse.maven:oreganized-439153:3958338")
-    compileOnly fg.deobf("curse.maven:every-compat-628539:4056282")
-    compileOnly fg.deobf("curse.maven:selene-499980:3842421")
+    //compileOnly fg.deobf("curse.maven:every-compat-628539:4056282")
+    //compileOnly fg.deobf("curse.maven:selene-499980:3842421")
 
     runtimeOnly fg.deobf("curse.maven:autoreglib-250363:3642382")
     runtimeOnly fg.deobf("curse.maven:quark-243121:3840125")
@@ -209,7 +209,7 @@ jar {
         attributes([
                 "Specification-Title"     : "modestmining",
                 "Specification-Vendor"    : "ncpbails",
-                "Specification-Version"   : "0.1.2", // We are version 1 of ourselves
+                "Specification-Version"   : "0.1.3", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "ncpbails",

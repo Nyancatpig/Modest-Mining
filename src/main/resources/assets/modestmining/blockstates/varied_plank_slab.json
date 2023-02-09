@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      { "model": "modestmining:block/varied_plank_slab_full_0" },
+      { "model": "modestmining:block/varied_plank_slab_full_1" },
+      { "model": "modestmining:block/varied_plank_slab_full_2" },
+      { "model": "modestmining:block/varied_plank_slab_full_3" },
+      { "model": "modestmining:block/varied_plank_slab_full_4" },
+      { "model": "modestmining:block/varied_plank_slab_full_5" },
+      { "model": "modestmining:block/varied_plank_slab_full_6" },
+      { "model": "modestmining:block/varied_plank_slab_full_7" },
+      { "model": "modestmining:block/varied_plank_slab_full_8" },
+      { "model": "modestmining:block/varied_plank_slab_full_9" },
+      { "model": "modestmining:block/varied_plank_slab_full_10" },
+      { "model": "modestmining:block/varied_plank_slab_full_11" }
+    ]
+  }
+}

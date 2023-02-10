@@ -96,22 +96,22 @@ public class ModBlocks {
                 @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
             }, CreativeModeTab.TAB_BUILDING_BLOCKS, true, 300);
 
-    public static final RegistryObject<Block> VARIED_PLANK_SLAB = registerBlock("varied_plank_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).noOcclusion())
-            {
-                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
-                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 60; }
-                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
-            }, CreativeModeTab.TAB_BUILDING_BLOCKS, true, 300);
+    //public static final RegistryObject<Block> VARIED_PLANK_SLAB = registerBlock("varied_plank_slab",
+    //        () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB).noOcclusion())
+    //        {
+    //            @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+    //            @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 60; }
+    //            @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
+    //        }, CreativeModeTab.TAB_BUILDING_BLOCKS, true, 300);
 
-    public static final RegistryObject<Block> VARIED_PLANK_STAIRS = registerBlock("varied_plank_stairs",
-            () -> new StairBlock(() -> Blocks.OAK_STAIRS.defaultBlockState(),
-                    BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).noOcclusion())
-            {
-                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
-                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 60; }
-                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
-            }, CreativeModeTab.TAB_BUILDING_BLOCKS, true, 300);
+    //public static final RegistryObject<Block> VARIED_PLANK_STAIRS = registerBlock("varied_plank_stairs",
+    //        () -> new StairBlock(() -> Blocks.OAK_STAIRS.defaultBlockState(),
+    //                BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS).noOcclusion())
+    //        {
+    //            @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+    //            @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 60; }
+    //            @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
+    //        }, CreativeModeTab.TAB_BUILDING_BLOCKS, true, 300);
 
 
     public static final RegistryObject<Block> OAK_PILLAR = registerBlock("oak_pillar",

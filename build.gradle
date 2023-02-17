@@ -25,7 +25,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: "org.spongepowered.mixin"
 
-version = '1.18.2-0.1.3.2'
+version = '1.18.2-0.1.4'
 group = 'com.ncpbails.modestmining' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'modestmining'
 
@@ -217,7 +217,7 @@ jar {
         attributes([
                 "Specification-Title"     : "modestmining",
                 "Specification-Vendor"    : "ncpbails",
-                "Specification-Version"   : "0.1.3.2", // We are version 1 of ourselves
+                "Specification-Version"   : "0.1.4", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "ncpbails",

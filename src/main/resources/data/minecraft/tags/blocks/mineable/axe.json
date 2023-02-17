@@ -41,6 +41,12 @@
     "modestmining:crimson_tiles",
     "modestmining:carved_crimson_planks",
     "modestmining:chiseled_crimson_planks",
-    "modestmining:varied_planks"
+    "modestmining:varied_planks",
+    "modestmining:varied_plank_slab",
+    "modestmining:varied_plank_stairs",
+    "modestmining:varied_plank_fence",
+    "modestmining:varied_plank_fence_gate",
+    "modestmining:varied_plank_button",
+    "modestmining:varied_plank_pressure_plate"
   ]
 }
